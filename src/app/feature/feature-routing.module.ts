@@ -8,8 +8,19 @@ const routes: Routes = [
     component: FeatureComponent,
     children: [
       {
+        path: 'dash',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+      },
+
+      {
         path: '',
-        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+        redirectTo: '',
+        pathMatch: 'full'
+      },
+
+      {
+        path: '**',
+        redirectTo: ''
       }
     ]
   }
