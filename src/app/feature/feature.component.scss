@@ -1,9 +1,7 @@
+@import "../../styles.scss";
+
 section{
   position: relative;
-}
-
-div{
-  border: 1px solid black;
 }
 
 .sidebar{
@@ -13,7 +11,7 @@ div{
   height: 100dvh;
   width: 126px;
   z-index: 2;
-  background: rebeccapurple;
+  background: $mainColor;
   transition: all 0.5s;
 }
 

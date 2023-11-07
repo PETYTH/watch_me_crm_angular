@@ -9,7 +9,32 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+
+      {
+        path: 'clients',
+        loadChildren: () => import('./clients/clients.module').then(m => m.ClientsModule)
+      },
+
+      {
+        path: 'commandes',
+        loadChildren: () => import('./commandes/commandes.module').then(m => m.CommandesModule)
+      },
+
+      {
+        path: 'employes',
+        loadChildren: () => import('./employes/employes.module').then(m => m.EmployesModule)
+      },
+
+      {
+        path: 'entreprises',
+        loadChildren: () => import('./entreprises/entreprises.module').then(m => m.EntreprisesModule)
+      },
+
+      {
+        path: 'societe',
+        loadChildren: () => import('./societe/societe.module').then(m => m.SocieteModule)
       },
 
       {

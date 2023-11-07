@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import {CommonModule} from "@angular/common";
 import {RouterLink, RouterModule} from "@angular/router";
+import { HeaderBoardsComponent } from './header-boards/header-boards.component';
 
 @NgModule({
   declarations: [
-    SidebarComponent
+    SidebarComponent,
+    HeaderBoardsComponent
   ],
   exports: [
-    SidebarComponent
+    SidebarComponent,
+    HeaderBoardsComponent
   ],
   imports: [
     CommonModule,
