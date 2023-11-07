@@ -1,0 +1,22 @@
+section{
+  position: relative;
+}
+
+div{
+  border: 1px solid black;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 126px;
+  z-index: 2;
+  background: rebeccapurple;
+  transition: all 0.5s;
+}
+
+#routing{
+  margin-left: 126px;
+}

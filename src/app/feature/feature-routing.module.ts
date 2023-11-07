@@ -8,7 +8,7 @@ const routes: Routes = [
     component: FeatureComponent,
     children: [
       {
-        path: 'dash',
+        path: '',
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
       },
 

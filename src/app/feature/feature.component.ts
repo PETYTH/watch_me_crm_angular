@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class FeatureComponent {
 
+  widthSidebar: string = '126px';
+  // timeout: number = 300;
+
+  onMouseEnter(){
+    setTimeout(() => {
+      this.widthSidebar = "300px";
+    }, 300)
+  }
+
+  onMouseLeave(){
+    setTimeout(() => {
+      this.widthSidebar = "126px";
+    }, 500);
+  }
 }
