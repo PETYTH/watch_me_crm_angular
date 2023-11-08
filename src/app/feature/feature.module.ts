@@ -6,13 +6,11 @@ import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import {SharedModule} from "../shared/shared.module";
-import { ListComponent } from './employes/page/list/list.component';
 
 
 @NgModule({
   declarations: [
     FeatureComponent,
-    ListComponent,
   ],
   imports: [
     FeatureRoutingModule,
