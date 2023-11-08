@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
 
-import { FeatureRoutingModule } from './feature-routing.module';
-import { FeatureComponent } from "./feature.component";
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
-import {SharedModule} from "../shared/shared.module";
+import { AuthComponent } from './auth.component';
+import { AuthRoutingModule } from './auth-routing.module';
 
 
 @NgModule({
   declarations: [
-    FeatureComponent,
+    AuthComponent
   ],
   imports: [
-    FeatureRoutingModule,
     RouterModule,
     CommonModule,
     HttpClientModule,
-    SharedModule
+    AuthRoutingModule,
   ],
   providers: [],
 })
-export class FeatureModule { }
+export class authModule { }
