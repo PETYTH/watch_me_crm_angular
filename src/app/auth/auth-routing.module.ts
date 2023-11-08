@@ -7,10 +7,10 @@ const routes: Routes = [
     path: '',
     component: AuthComponent,
     children: [
-      // {
-      //   path: '',
-      //   loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
-      // },
+      {
+        path: 'connexion',
+        loadChildren: () => import('./connexion/connexion.module').then(m => m.ConnexionModule)
+      },
 
       {
         path: '',
