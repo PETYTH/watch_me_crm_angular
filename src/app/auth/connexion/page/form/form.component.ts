@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-
+  
+  // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  //     $email = $_POST["email"];
+  //     $password = $_POST["password"];
+   
+  // }
+ 
 }
