@@ -1,1 +1,14 @@
+@import "../../../styles";
 
+#icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.lock{
+  color: $buttonColor;
+  text-align: right;
+  padding: .75rem .5rem;
+}

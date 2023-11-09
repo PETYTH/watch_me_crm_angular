@@ -1,0 +1,15 @@
+@import "../../../styles";
+
+span{
+  font-size: 25px;
+  color: $buttonColor;
+}
+i{
+  transition: all 0.3s;
+}
+i:hover{
+  color: $buttonHover;
+}
+i:active{
+  transform: scale(0.5);
+}
