@@ -31,6 +31,17 @@ padding-top: 4rem;
     color: #F2F2F2;
 }
 
+.input input{
+    width: 400px;
+    height: 40px;
+    border-radius: 50px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
 .button-connexion{
     background-color: #02BBE9;
+    color: #F2F2F2;
+    width: 200px;
+    border-radius: 50px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
