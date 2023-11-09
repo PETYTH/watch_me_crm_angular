@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class FormComponent {
   
-  // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  //     $email = $_POST["email"];
-  //     $password = $_POST["password"];
-   
-  // }
  
 }
