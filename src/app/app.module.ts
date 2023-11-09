@@ -7,9 +7,7 @@ import {FeatureModule} from "./feature/feature.module";
 import {SharedModule} from "./shared/shared.module";
 import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
-
 import { HomeComponent } from './home/home.component';
-import {HomeModule} from "./home/home.module";
 
 
 @NgModule({
@@ -22,7 +20,6 @@ import {HomeModule} from "./home/home.module";
     AppRoutingModule,
     FeatureModule,
     SharedModule,
-    HomeModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'}
