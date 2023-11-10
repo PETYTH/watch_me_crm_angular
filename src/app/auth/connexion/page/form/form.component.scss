@@ -46,6 +46,12 @@ padding-top: 4rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+.input input::placeholder {
+    color: #999; 
+    font-style: italic;
+    padding-left: 20px;
+}
+
 @media (max-width: 600px) {
     .input input {
         width: 300px; 
@@ -58,6 +64,7 @@ padding-top: 4rem;
     width: 200px;
     border-radius: 50px; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
 }
 
 .button-connexion:hover{
@@ -66,4 +73,8 @@ padding-top: 4rem;
 
 a{
     color: #F2F2F2;
+}
+
+a:hover{
+    color: #02BBE9;
 }
