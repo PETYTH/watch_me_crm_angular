@@ -2,12 +2,18 @@ body {
     background-image: url('/assets/img/bg-connexion.png');
     background-size: cover;
     background-repeat: no-repeat;
-  }
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
 
-// i{
-//     color: #F2F2F2;
-// }
-  
+.form-connexion{
+    text-align: center;
+    color: #F2F2F2;
+}
+    
 .logo {
     display: flex;
     align-items: center;
@@ -19,6 +25,7 @@ body {
     text-align: center;
     margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+   
 }
   
 .logo img {
@@ -31,16 +38,18 @@ h1{
 padding-top: 4rem;
 }  
 
-.form-connexion{
-    text-align: center;
-    color: #F2F2F2;
-}
 
 .input input{
-    width: 400px;
+    width: 400px; 
     height: 40px;
     border-radius: 50px; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    .input input {
+        width: 300px; 
+    }
 }
 
 .button-connexion{
@@ -57,5 +66,4 @@ padding-top: 4rem;
 
 a{
     color: #F2F2F2;
-    margin-bottom: 500px;
 }
