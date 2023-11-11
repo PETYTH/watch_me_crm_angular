@@ -5,16 +5,19 @@ import {CommonModule} from "@angular/common";
 import {RouterLink, RouterModule} from "@angular/router";
 import { HeaderBoardsComponent } from './header-boards/header-boards.component';
 import { ButtonLinkSidebarComponent } from './button-link-sidebar/button-link-sidebar.component';
+import { IconFormComponent } from './icon-form/icon-form.component';
 
 @NgModule({
   declarations: [
     SidebarComponent,
     HeaderBoardsComponent,
-    ButtonLinkSidebarComponent
+    ButtonLinkSidebarComponent,
+    IconFormComponent,
   ],
   exports: [
     SidebarComponent,
-    HeaderBoardsComponent
+    HeaderBoardsComponent,
+    IconFormComponent,
   ],
   imports: [
     CommonModule,

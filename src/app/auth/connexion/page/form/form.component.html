@@ -1,0 +1,27 @@
+<div class="bg">
+    <app-icon-form [iconExit]="'fa-solid fa-door-open'" [exitLink]="''" class="exit"></app-icon-form>
+    
+    <div class="form-connexion">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="logo">
+        </div> 
+        
+        <h1>Connexion</h1>
+        
+        <form method="post" action="form.component.ts">
+                
+            <div class="input">
+                <app-icon-form [iconForm]="'fa-solid fa-user'" class="iconUser"></app-icon-form>
+                <input type="email" name="email" id="email" required placeholder="emailduboss@gmail.com"><br><br>
+
+                <app-icon-form [iconForm]="'fa-solid fa-lock'" class="iconUser"></app-icon-form>
+                <input type="password" name="password" id="password" required placeholder="mot de passe"><br><br>
+            </div>
+            
+            <input type="submit" value="Se connecter" class="button-connexion">
+        </form>
+        
+        <a href="">Mot de passe oublié ?</a>
+    </div>
+    
+</div>
