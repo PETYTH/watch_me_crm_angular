@@ -7,5 +7,5 @@ import {Component, Input} from '@angular/core';
 })
 export class ButtonLinkSidebarComponent {
   @Input() icon: string = "fa-solid fa-question";
-  @Input() link: string = ""
+  @Input() link: string = "";
 }
