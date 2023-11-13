@@ -7,7 +7,9 @@
     align-items: center;
     justify-content: center;
     margin: 0;
+    position: relative;
 }
+
 
 .form-connexion{
     text-align: center;
@@ -38,19 +40,43 @@ h1{
 padding-top: 4rem;
 }  
 
+.exit{
+    color: #F2F2F2;
+    cursor: pointer;
+    position: absolute;
+    top: 15px; 
+    left: 20px;
+}
+
+.exit:hover{
+    color: #02BBE9;
+}
+
+.input {
+    position: relative; 
+}
+
+.icon-container {
+    position: absolute;
+    top: 50;
+    left: 0;
+    padding: 10px;
+    color: #111111;
+}
 
 .input input{
     width: 400px; 
     height: 40px;
-    border-radius: 50px; 
+    border-radius: 1rem; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     padding: 0 2rem;
+    display: flex;
+    margin-bottom: 25px;
 }
 
 .input input::placeholder {
     color: #999; 
     font-style: italic;
-    padding-left: 20px;
 }
 
 @media (max-width: 600px) {
@@ -63,7 +89,7 @@ padding-top: 4rem;
     background-color: #02BBE9;
     color: #F2F2F2;
     width: 200px;
-    border-radius: 50px; 
+    border-radius: 1rem; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 50px;
 }
@@ -79,3 +105,4 @@ a{
 a:hover{
     color: #02BBE9;
 }
+

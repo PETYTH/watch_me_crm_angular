@@ -10,11 +10,15 @@
         
         <form method="post" action="form.component.ts">
             <div class="input">
-                <app-icon-form [iconForm]="'fa-solid fa-user'" class="iconUser"></app-icon-form>
-                <input type="email" name="email" id="email" required placeholder="emailduboss@gmail.com"><br><br>
+                <div class="icon-container">
+                    <i class="fas fa-user iconUser"></i>
+                </div>
+                <input type="email" name="email" id="email" required placeholder="emailduboss@gmail.com">
 
-                <app-icon-form [iconForm]="'fa-solid fa-lock'" class="iconUser"></app-icon-form>
-                <input type="password" name="password" id="password" required placeholder="mot de passe"><br><br>
+                <div class="icon-container">
+                    <i class="fas fa-lock iconUser"></i>
+                </div>
+                <input type="password" name="password" id="password" required placeholder="mot de passe">
             </div>
             
             <input type="submit" value="Se connecter" class="button-connexion">
