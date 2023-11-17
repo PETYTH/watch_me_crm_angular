@@ -1,8 +1,11 @@
 @import "../../styles.scss";
 
+
 .home-wrap{
   max-width: 1294px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .logo{
@@ -10,220 +13,306 @@
   height: 7.5rem;
 }
 
-#home-intro{
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-  background: url("../../assets/img/img_bg_home_1.png") center/cover no-repeat;
+  #home-intro {
+    min-height: 100lvh;
+    height: 100%;
+    background: url("../../assets/img/img_bg_home_1.svg") center/cover no-repeat;
 
-  .home-info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1.25rem;
-  }
-
-  .home-btn{
-    width: 17rem;
-    height: 2.625rem;
-    background: $blueBtns;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    font-family: $fontBtns;
-    font-size: $sizeBtnTxt;
-    color: $iconColor;
-    cursor: pointer;
-    transition: background .5s;
-
-    &:hover{
-      background: $orangeBtnHover;
+    .home-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.25rem;
     }
-  }
 
-  .home-presentation{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
+    .home-btn {
+      width: 17rem;
+      height: 2.625rem;
+      background: $blueBtns;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      font-family: $fontBtns;
+      font-size: $sizeBtnTxt;
+      color: $iconColor;
+      cursor: pointer;
+      transition: background .5s;
 
-    .home-bulle-pres{
+      &:hover {
+        background: $orangeBtnHover;
+      }
+    }
+
+    .home-presentation {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 1rem;
-      width: 687px;
-      margin-top: 112px;
-      padding: 1rem;
-      color: $iconColor;
-      border-radius: 20px;
-      background: $bgFrameHome;
+      gap: 3rem;
 
-      h2{
-        font-family: $fontTitre;
-        font-size: $sizeTitre;
-        font-weight: $weightNormal;
-      }
+      .home-bulle-one {
+        .home-bulle-pres {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 687px;
+          margin-top: 112px;
+          color: $iconColor;
+          border-radius: 20px;
+          background: $bgFrameHome;
 
-      h3{
-        font-family: $fontSousTitre;
-        font-size: $sizeSousTitre;
-        font-weight: $weightNormal;
-      }
+          h2 {
+            font-family: $fontTitre;
+            font-size: $sizeTitre;
+            font-weight: $weightNormal;
+            padding: 1rem;
+          }
 
-      p{
-        font-family: $fontTxt;
-        font-size: $sizeTxt;
-        font-weight: $weightNormal;
-      }
-    }
+          h3 {
+            font-family: $fontSousTitre;
+            font-size: $sizeSousTitre;
+            font-weight: $weightNormal;
+            padding: 1rem;
+          }
 
-    //.plus-infos{
-    //  margin-left: 135px;
-    //}
-  }
-}
-
-#home-solution{
-  //min-height: 100vh;
-  height: 100%;
-  background: $homeGradient;
-
-  .titreEtDeco{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 50px 0 132px;
-
-    .before-deco-wrap{
-      display: flex;
-      flex-direction: column;
-      gap: .3rem;
-
-      .decoLine{
-        border-top: 4px solid $soluceLinesColor;
-        height: 4px;
-
-        &.before1{
-          width: 337px;
-        }
-        &.before2{
-          width: 322px;
-        }
-        &.before3{
-          width: 287px;
-        }
-        &.before4{
-          width: 260px;
+          p {
+            font-family: $fontTxt;
+            font-size: $sizeTxt;
+            font-weight: $weightNormal;
+            padding: 1rem;
+          }
         }
       }
-    }
-
-    h2{
-      font-family: $fontTitreSolo;
-      font-size: $sizeTitreSolo;
-      font-weight: $weightNormal;
-      text-align: center;
-      transform: translateY(-1.2rem);
-      padding: 5px 0;
-      color: $iconColor;
-    }
-
-    .after-deco-wrap{
-      display: flex;
-      flex-direction: column;
-      gap: .3rem;
-      transform: rotateY(180deg);
-
-      .decoLine {
-        border-top: 4px solid $soluceLinesColor;
-        height: 4px;
-
-        &.after1{
-          width: 337px;
-        }
-        &.after2{
-          width: 322px;
-        }
-        &.after3{
-          width: 287px;
-        }
-        &.after4{
-          width: 260px;
-        }
+      .plus-infos{
+        min-width: 63%;
+        width: 90%;
+        text-align: left;
       }
     }
   }
 
-  .bulles-soluce-wrap{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 92px;
 
-    .img-soluces{
-      background: url("../../assets/img/img_montre_solution_home.jpg"), lightgray 50% center/cover no-repeat;
-      height: 311px;
-      width: 540px;
-      border-radius: 5.75px;
-    }
+  #home-solution {
+    height: 100%;
+    background: $homeGradient;
 
-    .soluce-text{
-      padding: 1rem;
-      color: $iconColor;
-      border-radius: 20px;
-      background: $bgFrameHome;
-      height: 50%;
+    .titreEtDeco {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 50px 0 132px;
 
-      ul{
+      .before-deco-wrap {
         display: flex;
         flex-direction: column;
+        gap: .3rem;
+
+        .decoLine {
+          border-top: 4px solid $soluceLinesColor;
+          height: 4px;
+
+          &.before1 {
+            width: 337px;
+          }
+
+          &.before2 {
+            width: 322px;
+          }
+
+          &.before3 {
+            width: 287px;
+          }
+
+          &.before4 {
+            width: 260px;
+          }
+        }
+      }
+
+      .soluce-title {
+        transform: translateY(-1.2rem);
+        padding: 5px 0;
+
+        h2 {
+          font-family: $fontTitreSolo;
+          font-size: $sizeTitreSolo;
+          font-weight: $weightNormal;
+          text-align: center;
+          color: $iconColor;
+        }
+      }
+
+      .after-deco-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        transform: rotateY(180deg);
+
+        .decoLine {
+          border-top: 4px solid $soluceLinesColor;
+          height: 4px;
+
+          &.after1 {
+            width: 337px;
+          }
+
+          &.after2 {
+            width: 322px;
+          }
+
+          &.after3 {
+            width: 287px;
+          }
+
+          &.after4 {
+            width: 260px;
+          }
+        }
+      }
+    }
+
+    .bulles-soluce-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 132px;
+      width: 100%;
+
+      .img-soluces {
+        background: url("../../assets/img/img_montre_solution_home.jpg"), lightgray 50% center/cover no-repeat;
+        height: 311px;
+        max-width: 100%;
+        width: 540px;
+        border-radius: 20px;
+      }
+
+      .soluce-text {
+        display: flex;
         justify-content: center;
-        list-style-type: disc;
-        padding: 1rem 2rem;
+        align-items: center;
+        padding: 1rem;
+        color: $iconColor;
+        border-radius: 20px;
+        background: $bgFrameHome;
+        height: 311px;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          list-style-type: disc;
+          padding: 1rem 2rem;
+          font-family: $fontTxt;
+          font-size: $sizeTxt;
+        }
+      }
+    }
+  }
+
+  #home-slogan {
+    min-height: 100vh;
+    background: url("../../assets/img/img_bg_home_3.jpg") center/cover fixed no-repeat;
+
+    .slogan-wrap {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      p {
         font-family: $fontTxt;
         font-size: $sizeTxt;
+        font-weight: $weightNormal;
+        color: $iconColor;
+        text-align: center;
+      }
+    }
+  }
+
+  #home-footer {
+    background: $mainBlack;
+
+    .footer-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+
+      p {
+        font-family: $fontTxt;
+        font-size: $sizeTxt;
+        font-weight: $weightNormal;
+        color: $iconColor;
+        text-align: center;
+      }
+    }
+  }
+
+
+@media screen and (max-width: 1100px){
+  #home-intro{
+    .home-presentation{
+      .home-bulle-one{
+        display: flex;
+        justify-content: center;
+      }
+      .plus-infos{
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+
+  #home-solution{
+    .titreEtDeco{
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 100px;
+
+      .soluce-title{
+        transform: translateY(-.5rem);
+        padding: 0;
+      }
+    }
+
+    .bulles-soluce-wrap{
+      flex-direction: column;
+      gap: 4rem;
+
+      .soluce-text{
+        width: 540px;
+        max-width: 100%;
+        max-height: 100%;
       }
     }
   }
 }
 
-#home-slogan{
-  min-height: 100vh;
-  background: url("../../assets/img/img_bg_home_3.jpg") center/cover no-repeat;
+@media screen and (max-width: 900px){
+  #home-intro{
+    .home-info{
+      flex-direction: column;
+      gap: 5rem;
+      width: 100%;
+    }
 
-  .slogan-wrap{
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-    p{
-      font-family: $fontTxt;
-      font-size: $sizeTxt;
-      font-weight: $weightNormal;
-      color: $iconColor;
+    .home-presentation{
+      .plus-infos{
+        margin-bottom: 10rem;
+      }
     }
   }
 }
 
-#home-footer{
-  background: $mainBlack;
-
-  .footer-wrap{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-
-    p{
-      font-family: $fontTxt;
-      font-size: $sizeTxt;
-      font-weight: $weightNormal;
-      color: $iconColor;
+@media screen and (max-width: 500px) {
+  #home-solution{
+    .titreEtDeco{
+      padding-top: 5rem;
+      .before-deco-wrap, .after-deco-wrap{
+        display: none;
+      }
     }
   }
 }
