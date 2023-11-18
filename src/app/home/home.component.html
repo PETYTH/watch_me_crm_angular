@@ -6,7 +6,7 @@
       </div>
 
       <div class="connexion">
-        <a href="/auth/connexion/form"><button class="home-btn">Se connecter</button></a>
+        <button class="home-btn" [routerLink]="'/auth/connexion/form'">Se connecter</button>
       </div>
     </div>
 
@@ -21,7 +21,7 @@
       </div>
 
       <div class="plus-infos">
-        <a href="/" class="link-infos"><button class="home-btn">En savoir plus</button></a>
+        <button class="home-btn" (click)="goToInfos('home-solution')">En savoir plus</button>
       </div>
     </div>
   </div>
