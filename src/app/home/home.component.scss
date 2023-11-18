@@ -211,7 +211,7 @@
 
   #home-slogan {
     min-height: 100vh;
-    background: url("../../assets/img/img_bg_home_3.jpg") center/cover fixed no-repeat;
+    background: url("../../assets/img/img_bg_home_3.svg") center/cover fixed no-repeat;
 
     .slogan-wrap {
       height: 90vh;
@@ -280,6 +280,7 @@
     .bulles-soluce-wrap{
       flex-direction: column;
       gap: 4rem;
+      height: 50%;
 
       .soluce-text{
         width: 540px;
