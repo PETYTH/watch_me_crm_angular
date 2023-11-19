@@ -8,7 +8,7 @@ import {SharedModule} from "./shared/shared.module";
 import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 import { HomeComponent } from './home/home.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     FeatureModule,
     SharedModule,
+    FormsModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'}

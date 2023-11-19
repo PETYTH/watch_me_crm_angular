@@ -1,0 +1,31 @@
+<div class="bg">
+    <app-icon-form [iconExit]="'fa-solid fa-door-open'" [exitLink]="''" class="exit"></app-icon-form>
+    
+    <div class="form-connexion">
+        <div class="logo">
+            <img src="assets/img/white_logo.svg" alt="logo">
+        </div> 
+        
+        <h1>Bienvenue Prénom Nom</h1>
+        <h3>Veuillez modifier votre mot de passe pour continuer</h3>
+        
+        <form method="post" action="form.component.ts">
+            <div class="input">
+                <label for="password">Nouveau mot de passe :</label>
+                <div class="icon-container">
+                    <i class="fas fa-lock iconUser"></i>
+                </div>
+                <input type="password" name="password" id="password" required placeholder="nouveau mot de passe">
+
+                <label for="password">Confirmer mot de passe :</label>
+                <div class="icon-container">
+                    <i class="fas fa-lock iconUser"></i>
+                </div>
+                <input type="password" name="password" id="password" required placeholder="confirmer mot de passe">
+            </div>
+            
+            <input type="submit" value="Modifier" class="button-connexion">
+        </form>
+    </div>
+    
+</div>

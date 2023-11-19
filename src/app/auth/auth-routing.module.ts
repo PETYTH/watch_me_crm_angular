@@ -13,6 +13,16 @@ const routes: Routes = [
       },
 
       {
+        path: 'first-co',
+        loadChildren: () => import('./first-connexion/first-connexion.module').then(m => m.FirstConnexionModule)
+      },
+
+      {
+        path: 'forget',
+        loadChildren: () => import('./forget-pwd/forget-pwd.module').then(m => m.ForgetModule)
+      },
+
+      {
         path: '',
         redirectTo: '',
         pathMatch: 'full'
