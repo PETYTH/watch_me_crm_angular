@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Output, Input} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +9,9 @@ export class SidebarComponent {
   @Output() lockChange = new EventEmitter<boolean>();
   lock = true;
   lockIcon = "fa-solid fa-lock";
+  @Input() icon_title : string = "";
 
+  @Input() isSidebarOpen = false;
 
   lockEvent(){
     this.lock = !this.lock;
@@ -23,5 +25,4 @@ export class SidebarComponent {
     // Émettre l'événement vers le parent
     this.lockChange.emit(this.lock);
   }
-
 }

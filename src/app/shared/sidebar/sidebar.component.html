@@ -1,7 +1,11 @@
 <div class="lock"><span (click)="lockEvent()"><i class="{{lockIcon}}"></i></span></div>
 
 <div id="icons">
-  <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'" ></app-button-link-sidebar>
+  <div class="flex">
+    <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'"></app-button-link-sidebar>
+    <p [ngIf] [ngClass]="{ 'hide': lock, 'icon-title': !lock }">Employés</p>
+  </div>
+
   <app-button-link-sidebar [icon]="'fa-solid fa-building'" [link]="'/dashboard/entreprises/list'"></app-button-link-sidebar>
   <app-button-link-sidebar [icon]="'fa-solid fa-user'" [link]="'/dashboard/clients/list'"></app-button-link-sidebar>
   <app-button-link-sidebar [icon]="'fa-solid fa-cart-shopping'" [link]="'/dashboard/commandes/list'"></app-button-link-sidebar>
