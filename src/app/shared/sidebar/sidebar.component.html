@@ -1,43 +1,72 @@
-<div class="sidebar">
+<div class="sidebar" [class.closed]="!isSidebarOpen" (mouseenter)="hideTexte()" (mouseleave)="displayTexte()">
 
-  <div class="logo">
-    <a [routerLink]="'/'">
-      <img src="assets/img/white_logo.svg" alt="logo">
-    </a>
-  </div>
-  
-  <hr>
-  
   <div class="lock"><span (click)="lockEvent()"><i class="{{lockIcon}}"></i></span></div>
-  
-  <div id="icons">
-    <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'" ></app-button-link-sidebar>
-    <app-button-link-sidebar [icon]="'fa-solid fa-building'" [link]="'/dashboard/entreprises/list'"></app-button-link-sidebar>
-    <app-button-link-sidebar [icon]="'fa-solid fa-user'" [link]="'/dashboard/clients/list'"></app-button-link-sidebar>
-    <app-button-link-sidebar [icon]="'fa-solid fa-cart-shopping'" [link]="'/dashboard/commandes/list'"></app-button-link-sidebar>
-    <app-button-link-sidebar [icon]="'fa-solid fa-city'" [link]="'/dashboard/societe/list'"></app-button-link-sidebar>
-  </div>
-  
-  <hr>
 
-  <div class="logo">
-    <img src="assets/img/user.png" alt="user">
-  </div>
+  <div class="sidebar-wrap">
 
-  <div class="user">
-    <p>En ligne</p>
-    <h3>Lendodo le musclé</h3>
-  </div>
-
-  <div class="logout">
-    <div class="iconLogout">
-      <app-button-link-sidebar [icon]="'fa-solid fa-right-from-bracket'" [link]="'/'"></app-button-link-sidebar>
+    <div class="logo">
+      <a [routerLink]="'/'">
+        <img src="assets/img/white_logo.svg" alt="logo">
+      </a>
     </div>
-    <div class="hide-p">
-      <p>Se déconnecter</p>
+
+    <div class="ligne"></div>
+
+    <div id="icons">
+      <div class="icon">
+        <div class="flex">
+          <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'" ></app-button-link-sidebar>
+          <p class="hide-p">Employés</p>
+        </div>
+        <div class="flex">
+          <app-button-link-sidebar [icon]="'fa-solid fa-building'" [link]="'/dashboard/entreprises/list'"></app-button-link-sidebar>
+          <p class="hide-p">entreprises</p>
+        </div>
+        <div class="flex">
+          <app-button-link-sidebar [icon]="'fa-solid fa-user'" [link]="'/dashboard/clients/list'"></app-button-link-sidebar>
+          <p class="hide-p">clients</p>
+        </div>
+        <div class="flex">
+          <app-button-link-sidebar [icon]="'fa-solid fa-cart-shopping'" [link]="'/dashboard/commandes/list'"></app-button-link-sidebar>
+          <p class="hide-p">Commandes</p>
+        </div>
+        <div class="flex">
+          <app-button-link-sidebar [icon]="'fa-solid fa-city'" [link]="'/dashboard/societe/list'"></app-button-link-sidebar>
+          <p class="hide-p">Société</p>
+        </div>
+      </div>
     </div>
+    
+    <div class="ligne"></div>
+    
+    <div class="user-section">
+      <!-- photo user selon la BDD -->
+      <div class="user-wrap">
+        <div class="logo user-logo">
+            <div class="user-photo"></div>
+            <div class="online-status" [class.online]="isUserOnline" [class.offline]="!isUserOnline"></div>
+        </div>
+        <p>En ligne</p>
+      </div>
+      
+      <!-- User et status selon la BDD -->
+      <div class="user">
+          <h3>Lendodo le musclé</h3> 
+      </div>
+    
+      <div class="infoflex">
+        <div class="iconLogout">
+          <app-button-link-sidebar [icon]="'fa-solid fa-right-from-bracket'" [link]="'/'"></app-button-link-sidebar>
+        </div>
+        <p class="hide-p">Se déconnecter</p>
+      </div>
+    </div>
+
   </div>
+  
 </div>
+
+
 
 
 

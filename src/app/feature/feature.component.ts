@@ -32,4 +32,5 @@ export class FeatureComponent {
     this.lock = lock;
     console.log('Lock status changed:', this.lock);
   }
+ 
 }
