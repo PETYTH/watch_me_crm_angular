@@ -10,7 +10,6 @@ export class SidebarComponent {
   lock = true;
   lockIcon = "fa-solid fa-lock";
 
-
   lockEvent(){
     this.lock = !this.lock;
 
@@ -22,6 +21,7 @@ export class SidebarComponent {
 
     // Émettre l'événement vers le parent
     this.lockChange.emit(this.lock);
+
   }
 
 }

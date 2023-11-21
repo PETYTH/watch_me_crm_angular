@@ -1,9 +1,43 @@
-<div class="lock"><span (click)="lockEvent()"><i class="{{lockIcon}}"></i></span></div>
+<div class="sidebar">
 
-<div id="icons">
-  <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'dashboard/employes/list'" ></app-button-link-sidebar>
-  <app-button-link-sidebar [icon]="'fa-solid fa-building'" [link]="'/entreprises/list'"></app-button-link-sidebar>
-  <app-button-link-sidebar [icon]="'fa-solid fa-user'" [link]="'/clients/list'"></app-button-link-sidebar>
-  <app-button-link-sidebar [icon]="'fa-solid fa-cart-shopping'" [link]="'/commandes/list'"></app-button-link-sidebar>
-  <app-button-link-sidebar [icon]="'fa-solid fa-city'" [link]="'/societe/list'"></app-button-link-sidebar>
+  <div class="logo">
+    <a [routerLink]="'/'">
+      <img src="assets/img/white_logo.svg" alt="logo">
+    </a>
+  </div>
+  
+  <hr>
+  
+  <div class="lock"><span (click)="lockEvent()"><i class="{{lockIcon}}"></i></span></div>
+  
+  <div id="icons">
+    <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'" ></app-button-link-sidebar>
+    <app-button-link-sidebar [icon]="'fa-solid fa-building'" [link]="'/dashboard/entreprises/list'"></app-button-link-sidebar>
+    <app-button-link-sidebar [icon]="'fa-solid fa-user'" [link]="'/dashboard/clients/list'"></app-button-link-sidebar>
+    <app-button-link-sidebar [icon]="'fa-solid fa-cart-shopping'" [link]="'/dashboard/commandes/list'"></app-button-link-sidebar>
+    <app-button-link-sidebar [icon]="'fa-solid fa-city'" [link]="'/dashboard/societe/list'"></app-button-link-sidebar>
+  </div>
+  
+  <hr>
+
+  <div class="logo">
+    <img src="assets/img/user.png" alt="user">
+  </div>
+
+  <div class="user">
+    <p>En ligne</p>
+    <h3>Lendodo le musclé</h3>
+  </div>
+
+  <div class="logout">
+    <div class="iconLogout">
+      <app-button-link-sidebar [icon]="'fa-solid fa-right-from-bracket'" [link]="'/'"></app-button-link-sidebar>
+    </div>
+    <div class="hide-p">
+      <p>Se déconnecter</p>
+    </div>
+  </div>
 </div>
+
+
+
