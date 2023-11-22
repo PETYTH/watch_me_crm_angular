@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Output, Input} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,6 +9,8 @@ export class SidebarComponent {
   @Output() lockChange = new EventEmitter<boolean>();
   lock = true;
   lockIcon = "fa-solid fa-lock";
+
+  @Input() isSidebarOpen : boolean = false;
 
   lockEvent(){
     this.lock = !this.lock;
@@ -27,26 +29,6 @@ export class SidebarComponent {
 
   logEvent(){
     this.isUserOnline = !this.isUserOnline;
-  }
-
-  // texte hide 
-  isSidebarOpen = true;
-
-  toggleSidebar() {
-    this.isSidebarOpen = !this.isSidebarOpen;
-
-  }
-
-  hideTexte() {
-    if (!this.isSidebarOpen) {
-      console.log("Texte caché");
-    }
-  }
-  
-  displayTexte() {
-    if (this.isSidebarOpen) {
-      console.log("Texte affiché");
-    }
   }
 
 }

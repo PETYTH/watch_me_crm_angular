@@ -1,0 +1,85 @@
+.card-commande {
+    margin: 20px;
+    background: #43264f;
+    color: white;
+    border-radius: 1rem;
+    width: 85%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    
+    .head-commande{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .button{
+            
+            .filter-button{
+                background-color: #02BBE9;
+                color: #F2F2F2;
+                width: 7rem;
+                border-radius: 1rem; 
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                height: 1.5rem;
+
+                i{
+                    padding-left: 1rem;
+                }
+            }
+
+            .filter-button:hover{
+                background: #FB6316;
+            }
+
+            .add-button{
+                background-color: #02BBE9;
+                color: #F2F2F2;
+                width: 7rem;
+                border-radius: 1rem; 
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                margin-left: 4rem;
+                height: 1.5rem;
+
+            }
+
+            .add-button:hover{
+                background: #FB6316;
+            }
+        }
+    }
+
+    .table-container {
+        overflow: hidden;
+        border-radius: 1rem;
+        transition: background-color 0.3s ease;
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+
+            th, td {
+                padding: 1rem;
+                text-align: left;
+
+                i {
+                    padding: 0.5rem;
+                }
+            }
+
+            tbody {
+                transition: background-color 0.3s ease;
+                margin-top: 1rem;
+
+                &:hover {
+                    background-color: #02BBE9;
+                }
+            }
+        }
+    }
+
+    .pagination{
+        margin-top: 2rem;
+        text-align: center;
+        color: #02BBE9;
+    }
+  }

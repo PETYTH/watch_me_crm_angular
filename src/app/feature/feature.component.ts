@@ -12,11 +12,13 @@ export class FeatureComponent {
   // timeout: number = 300;
 
   lock = true;
+  isSidebarOpen = false;
 
   onMouseEnter(){
     if (!this.lock){
       setTimeout(() => {
         this.widthSidebar = "300px";
+        this.isSidebarOpen = true;
       }, 300);
     }
   }
@@ -24,13 +26,14 @@ export class FeatureComponent {
   onMouseLeave(){
     setTimeout(() => {
       this.widthSidebar = "126px";
+      this.isSidebarOpen = false;
     }, 500);
   }
 
   // Méthode appelée lorsque l'événement lockChange est émis par l'enfant
   onLockChange(lock: boolean) {
     this.lock = lock;
-    console.log('Lock status changed:', this.lock);
   }
- 
+
+  protected readonly closed = closed;
 }
