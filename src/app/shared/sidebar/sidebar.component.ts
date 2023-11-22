@@ -5,13 +5,10 @@ import {Component, EventEmitter, Output, Input} from '@angular/core';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent {
+export class SidebarComponent{
   @Output() lockChange = new EventEmitter<boolean>();
   lock = true;
   lockIcon = "fa-solid fa-lock";
-  @Input() icon_title : string = "";
-
-  @Input() isSidebarOpen = false;
 
   lockEvent(){
     this.lock = !this.lock;
@@ -21,7 +18,6 @@ export class SidebarComponent {
     } else {
       this.lockIcon = "fa-solid fa-lock-open";
     }
-
     // Émettre l'événement vers le parent
     this.lockChange.emit(this.lock);
   }

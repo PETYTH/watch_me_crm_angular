@@ -1,27 +1,14 @@
 @import "../../../styles";
 
+
 #icons{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  }
 
-  .flex{
-    display: flex;
-    color: $iconColor;
-    justify-content: center;
-    align-items: flex-end;
-    font-size: .8rem;
-    gap: 1rem;
-  }
-  .hide{
-    display: none;
-  }
-  .icon-title{
-    display: block;
-  }
-}
 .lock{
   color: $iconColor;
   text-align: right;
