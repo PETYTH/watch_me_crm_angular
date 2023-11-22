@@ -1,3 +1,5 @@
+<!-- auth/form/form.component.html -->
+
 <div class="bg">
     <app-icon-form [iconExit]="'fa-solid fa-door-open'" [exitLink]="''" class="exit"></app-icon-form>
 
@@ -8,23 +10,22 @@
 
         <h1>Connexion</h1>
 
-        <form method="post" action="form.component.ts">
-            <div class="input">
+        <form [formGroup]="credentialsForm" (submit)="loginUser()">
+        <div class="input">
                 <div class="icon-container">
                     <i class="fas fa-user iconUser"></i>
                 </div>
-                <input type="email" name="email" id="email" required placeholder="emailduboss@gmail.com">
+                <input type="email" formControlName="email" id="email" required placeholder="nathan@gmail.com">
 
                 <div class="icon-container">
                     <i class="fas fa-lock iconUser"></i>
                 </div>
-                <input type="password" name="password" id="password" required placeholder="mot de passe">
+                <input type="password" formControlName="password" id="password" required placeholder="mot de passe">
             </div>
 
             <input type="submit" value="Se connecter" class="button-connexion">
         </form>
-        
-        <a [routerLink]="'/auth/forget/form'">Mot de passe oublié ?</a>
-    </div>
 
+        <a routerLink="/auth/forget/form">Mot de passe oublié ?</a>
+    </div>
 </div>

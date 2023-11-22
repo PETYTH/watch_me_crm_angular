@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { FormComponent } from './page/form/form.component';
@@ -15,6 +16,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     RouterModule,
     CommonModule,
     SharedModule,
+    ReactiveFormsModule, // Ajoutez cette ligne
   ]
 })
 
