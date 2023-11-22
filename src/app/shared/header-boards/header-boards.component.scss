@@ -1,26 +1,47 @@
 @import "../../../styles";
 
-.wrap-header{
+.wrap-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $mainColor;
+  color: $iconColor;
+  padding: 1rem;
+
+  .role {
+    background: $blueBtns;
+    padding: 2px 15px;
+    border-radius: 1rem;
+  }
+
+  .all-icon{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: $mainColor;
-    color: $iconColor;
-    padding: 1rem;
-
-    .role{
-        background: $blueBtns;
-        padding: 2px 15px ;
-        border-radius: 1rem;
-    }
-
-    .icon-message{
         i{
             padding-left: 1.5rem;
+
+            &:hover{
+                color: $blueBtns;
+            }
         }
+
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+
+    .title{
+        margin-top: 1.5rem;
     }
 
-    i:hover{
-        color: $blueBtns;
+    .role {
+      margin-top: 1.5rem;
     }
+
+    .all-icon{
+        padding-top: 1rem;
+        margin-right: 1.5rem;
+    }
+  }
 }
