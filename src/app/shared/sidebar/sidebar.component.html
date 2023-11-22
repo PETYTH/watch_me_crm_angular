@@ -14,26 +14,52 @@
 
     <div id="icons">
       <div class="icon">
+
         <div class="flex">
-          <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'"></app-button-link-sidebar>
-          <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Employés</p>
+          <div class="espace-icon">
+            <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'"></app-button-link-sidebar>
+          </div>
+          <div class="espace-texte">
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Employés <i class="fa-solid fa-chevron-down"></i></p>
+          </div>
         </div>
+
         <div class="flex">
-          <app-button-link-sidebar [icon]="'fa-solid fa-building'" [link]="'/dashboard/entreprises/list'"></app-button-link-sidebar>
-          <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">entreprises</p>
+          <div class="espace-icon">
+            <app-button-link-sidebar [icon]="'fa-solid fa-building'" [link]="'/dashboard/entreprises/list'"></app-button-link-sidebar>
+          </div>
+          <div class="espace-texte">
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">entreprises<i class="fa-solid fa-chevron-down"></i></p>
+          </div>
         </div>
+
         <div class="flex">
-          <app-button-link-sidebar [icon]="'fa-solid fa-user'" [link]="'/dashboard/clients/list'"></app-button-link-sidebar>
-          <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Clients</p>
+          <div class="espace-icon">
+            <app-button-link-sidebar [icon]="'fa-solid fa-user'" [link]="'/dashboard/clients/list'"></app-button-link-sidebar>
+          </div>
+          <div class="espace-texte">
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Clients<i class="fa-solid fa-chevron-down"></i></p>
+          </div>
         </div>
+
         <div class="flex">
-          <app-button-link-sidebar [icon]="'fa-solid fa-cart-shopping'" [link]="'/dashboard/commandes/list'"></app-button-link-sidebar>
-          <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Commandes</p>
+          <div class="espace-icon">
+            <app-button-link-sidebar [icon]="'fa-solid fa-cart-shopping'" [link]="'/dashboard/commandes/list'"></app-button-link-sidebar>
+          </div>
+          <div class="espace-texte">
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Commandes<i class="fa-solid fa-chevron-down"></i></p>
+          </div>
         </div>
+
         <div class="flex">
-          <app-button-link-sidebar [icon]="'fa-solid fa-city'" [link]="'/dashboard/societe/list'"></app-button-link-sidebar>
-          <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Sociétés</p>
+          <div class="espace-icon">
+            <app-button-link-sidebar [icon]="'fa-solid fa-city'" [link]="'/dashboard/societe/list'"></app-button-link-sidebar>
+          </div>
+          <div class="espace-texte">
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Sociétés<i class="fa-solid fa-chevron-down"></i></p>
+          </div>
         </div>
+        
       </div>
     </div>
     

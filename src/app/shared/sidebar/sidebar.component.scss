@@ -48,15 +48,6 @@
   object-fit: cover;
 }
 
-#icons{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-
 .lock{
   color: $iconColor;
   text-align: right;
@@ -79,15 +70,43 @@
   transform: scaleX(-1);
 }
 
+#icons {
+  width: 100%;
+
+  .icon {
+    width: 100%;
+
+    .flex {
+      display: flex;
+      align-items: center; 
+
+      .espace-icon,
+      .espace-texte {
+        width: 50%; 
+        text-align: center;
+      }
+
+      .espace-texte {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;  
+      }
+    }
+  }
+}
+
 .flex, .infoflex{
   color: white;
   display: flex;
   font-size: 10px;
   align-items: center;
   margin: 15px 0;
-  justify-content: center;
-}
+  justify-content: space-around;
 
+  i{
+    padding-left: 10px;
+  }
+}
 
 .flex p, .infoflex p{
   margin-left: 10px;
