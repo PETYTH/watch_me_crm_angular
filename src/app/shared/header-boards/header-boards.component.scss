@@ -1,0 +1,47 @@
+@import "../../../styles";
+
+#header{
+  margin-top: 1rem;
+  .all-wrap{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.3rem;
+
+    .main-wrap{
+      width: 95%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1.3rem;
+
+      .main-head{
+        width: 50%;
+        text-align: center;
+      }
+    }
+
+    .today, .home-title{
+      font-family: $fontTitre;
+      font-size: $sizeSousTitre;
+      text-transform: capitalize;
+    }
+  }
+
+  .icon-container{
+    display: flex;
+    gap: 1rem;
+    font-size: $sizeSousTitre;
+  }
+  .palette{
+    font-size: $sizeSousTitre;
+  }
+  .line{
+    border-bottom: 1px solid $mainBlack;
+    width: 95%;
+    margin: 1.5rem auto 2rem;
+  }
+}

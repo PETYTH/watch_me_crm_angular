@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderBoardsComponent {
   today: Date = new Date();
+
+  enveloppe : string = "fa-regular fa-envelope";
+  bell : string = "fa-regular fa-bell";
+  palette : string = "fa-solid fa-palette";
 }

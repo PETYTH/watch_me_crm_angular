@@ -1,9 +1,31 @@
 <section id="header">
-  <div class="wrap">
-    <div class="time">
+  <div class="all-wrap">
+    <div class="main-wrap">
+      <div class="time">
       <span class="today">
         {{today | date:'EEEE'}} {{today | date:'d'}} {{today | date:'MMMM'}}
       </span>
+      </div>
+
+      <div class="main-head">
+        <span class="home-title">Dashboard</span>
+      </div>
+
+      <div class="icon-container">
+      <span class="enveloppe">
+        <i class="{{enveloppe}}"></i>
+      </span>
+        <span class="bell">
+        <i class="{{bell}}"></i>
+      </span>
+      </div>
     </div>
+
+    <span class="palette">
+      <i class="{{palette}}"></i>
+    </span>
   </div>
+
+  <div class="line"></div>
+
 </section>
