@@ -16,7 +16,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     RouterModule,
     CommonModule,
     SharedModule,
-    ReactiveFormsModule, // Ajoutez cette ligne
+    ReactiveFormsModule,
   ]
 })
 

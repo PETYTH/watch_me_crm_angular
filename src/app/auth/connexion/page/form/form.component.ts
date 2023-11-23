@@ -1,6 +1,10 @@
+// form.component.ts
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../../../api/api.service';
+import { AuthService } from '../../../../auth.service';
+
 
 @Component({
   selector: 'app-form',
@@ -10,7 +14,12 @@ import { ApiService } from '../../../api/api.service';
 export class FormComponent {
   credentialsForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private apiService: ApiService) {
+  constructor(
+      private fb: FormBuilder,
+      private apiService: ApiService,
+      private authService: AuthService, // Injectez le AuthService
+      private router: Router
+  ) {
     this.credentialsForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -30,27 +39,13 @@ export class FormComponent {
       this.apiService.loginUser(credentials).subscribe(
           (response) => {
             console.log('Connexion réussie :', response);
-            // Stockez le jeton ou effectuez d'autres actions si nécessaire
+            this.authService.login(response.token);
+            this.router.navigate(['/dashboard']);
           },
           (error) => {
             console.error('Échec de la connexion :', error);
-            // Gérez l'erreur, par exemple, affichez un message à l'utilisateur
           }
       );
     }
   }
-
-  logout(): void {
-    this.apiService.logoutUser().subscribe(
-        (response) => {
-          console.log('Déconnexion réussie :', response);
-          // Effectuez les actions nécessaires après la déconnexion
-        },
-        (error) => {
-          console.error('Erreur lors de la déconnexion :', error);
-          // Gérez l'erreur en conséquence
-        }
-    );
-  }
-
 }

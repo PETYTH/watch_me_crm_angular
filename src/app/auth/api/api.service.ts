@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root',
@@ -18,9 +19,8 @@ export class ApiService {
     return this.http.post(`${this.apiUrl}/login_check`, credentials);
   }
 
-  logoutUser(): Observable<any> {
-    // Envoyer une requête POST au point de déconnexion
-    return this.http.post(`${this.apiUrl}/logout`, {});
+  logoutUser(headers: HttpHeaders): Observable<any> {
+    return this.http.post(`${this.apiUrl}/logout`, {}, { headers });
   }
   // Ajoutez d'autres méthodes d'API selon les besoins
 }

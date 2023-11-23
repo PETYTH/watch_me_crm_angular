@@ -5,7 +5,7 @@
   <div class="sidebar-wrap">
 
     <div class="logo">
-      <a [routerLink]="'/dashboard'">
+      <a [routerLink]="''">
         <img src="assets/img/white_logo.svg" alt="logo">
       </a>
     </div>
@@ -36,9 +36,9 @@
         </div>
       </div>
     </div>
-    
+
     <div class="ligne"></div>
-    
+
     <div class="user-section">
       <!-- photo user selon la BDD -->
       <div class="user-wrap">
@@ -48,21 +48,21 @@
         </div>
         <p>En ligne</p>
       </div>
-      
+
       <!-- User et status selon la BDD -->
       <div class="user">
-          <h3>Lendodo le musclé</h3> 
+          <h3>Lendodo le musclé</h3>
       </div>
-    
+
       <div class="infoflex">
         <div class="iconLogout">
-          <app-button-link-sidebar [icon]="'fa-solid fa-right-from-bracket'" [link]="'/'"></app-button-link-sidebar>
+          <i class="fa-solid fa-right-from-bracket" (click)="logoutUser()"></i>
         </div>
         <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Se déconnecter</p>
       </div>
     </div>
 
   </div>
-  
+
 </div>
 

@@ -6,7 +6,8 @@
       </div>
 
       <div class="connexion">
-        <button class="home-btn" [routerLink]="'/auth/connexion/form'">Se connecter</button>
+        <button *ngIf="!isAuthenticated()" class="home-btn" [routerLink]="'/auth/connexion/form'">Se connecter</button>
+        <button *ngIf="isAuthenticated()" class="home-btn" [routerLink]="'/dashboard'">Dashboard</button>
       </div>
     </div>
 
