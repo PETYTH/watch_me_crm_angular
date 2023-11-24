@@ -10,6 +10,7 @@ const routes: Routes = [
       {
         path: 'form',
         component: FormComponent,
+        canActivate: [AuthGuard]
       }
     ]
   }

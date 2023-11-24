@@ -42,13 +42,15 @@ export class SidebarComponent{
     this.isUserOnline = !this.isUserOnline;
   }
 
-    // sidebar.component.ts
-// ...
+
+  getUserName(): string {
+    return this.authService.getUserName();
+  }
 
     logoutUser(): void {
         // Créer les en-têtes nécessaires
         const headers = new HttpHeaders({
-            'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+            'Authorization': 'Bearer ' + localStorage.getItem('userToken'),
             'Content-Type': 'application/json',
         });
 
@@ -57,8 +59,8 @@ export class SidebarComponent{
             () => {
                 console.log('Déconnexion réussie');
                 this.authService.logout();
-                this.router.navigate(['/auth/connexion/form']);
-                localStorage.removeItem('access_token');
+              //  this.router.navigate(['/auth/connexion/form']);
+              //  localStorage.removeItem('access_token');
             },
             (error) => {
                 console.error('Erreur lors de la déconnexion :', error);

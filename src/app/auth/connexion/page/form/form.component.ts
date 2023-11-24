@@ -15,10 +15,10 @@ export class FormComponent {
   credentialsForm: FormGroup;
 
   constructor(
-      private fb: FormBuilder,
-      private apiService: ApiService,
-      private authService: AuthService, // Injectez le AuthService
-      private router: Router
+    private fb: FormBuilder,
+    private apiService: ApiService,
+    private authService: AuthService, // Injectez le AuthService
+    private router: Router
   ) {
     this.credentialsForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -37,14 +37,14 @@ export class FormComponent {
       };
 
       this.apiService.loginUser(credentials).subscribe(
-          (response) => {
-            console.log('Connexion réussie :', response);
-            this.authService.login(response.token);
-            this.router.navigate(['/dashboard']);
-          },
-          (error) => {
-            console.error('Échec de la connexion :', error);
-          }
+        (response) => {
+          console.log('Connexion réussie :', response);
+          this.authService.login(response.token, response.lastName, response.firstName);
+          this.router.navigate(['/dashboard']);
+        },
+        (error) => {
+          console.error('Échec de la connexion :', error);
+        }
       );
     }
   }
