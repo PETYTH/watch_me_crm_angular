@@ -1,1 +1,49 @@
-<p>bubble-evolution-stats works!</p>
+<section id="evolution">
+  <div class="bubble huge">
+    <div class="overall">
+      <div class="evolution-head">
+        <div class="evo-head-container">
+
+          <div class="evo-title">
+            <h2 class="title">Titre</h2>
+          </div>
+
+          <div class="evo-subtitle">
+            <h3 class="subtitle">Sous-Titre</h3>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div class="filter-btn">
+            <span>Filtres</span>
+            <div class="filter-more"><i class="fa-solid fa-angle-down"></i></div>
+          </div>
+
+          <div class="add-btn">
+            <div class="add-btn"><i class="fa-solid fa-circle-plus"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-table">
+        <table>
+          <thead>
+          <tr>
+            <th *ngFor="let header of tableHeaders">{{ header }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let row of tableRows">
+            <td *ngFor="let cell of row">
+              {{ cell }}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+

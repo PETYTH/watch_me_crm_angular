@@ -1,0 +1,83 @@
+@import "../../../styles";
+
+#infos-utiles{
+  color: $iconColor;
+  .bubble{
+    border: 1px solid black;
+    border-radius: 22px;
+    background: $bgBubbles;
+
+    &.medium{
+      width: 22rem; // 351px
+      height: 29rem; // 464px
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .overall{
+        border-radius: 22px;
+        height: 100%;
+        width: 100%;
+
+        .title-container{
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 19px;
+
+          .title-utile{
+            margin: 2rem 0;
+            padding-right: 19px;
+            width: 60%;
+            text-align: right;
+
+            .title{
+              font-family: $fontTitre;
+              font-size: $sizeTitre;
+            }
+          }
+          .more-btn{
+            padding: 0 1.5rem;
+            border-radius: 22px;
+            background: $blueBtns;
+            margin-right: 13px;
+
+            .filter-more{
+              font-size: $sizeSousTitre;
+            }
+          }
+        }
+
+        .subtitle-utile{
+          margin: 1.4rem 2rem 3rem;
+          text-align: center;
+
+          .subtitle{
+            font-family: $fontSousTitre;
+            font-size: $sizeSousTitre;
+          }
+        }
+
+        .infos-container{
+          width: 90%;
+          margin: 0 auto;
+
+          .list-infos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            padding: .5rem 0;
+
+            li{
+              font-family: $fontTxt;
+              font-size: $sizeTxt;
+            }
+          }
+        }
+      }
+    }
+  }
+}

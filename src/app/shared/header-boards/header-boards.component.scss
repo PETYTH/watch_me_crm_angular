@@ -63,7 +63,7 @@
     font-size: $sizeSousTitre;
     padding-left: 4rem;
   }
-  .enveloppe:hover, .bell:hover, .palette:hover{
+  .enveloppe > i:hover, .bell > i:hover, .palette > i:hover{
     color: $blueBtns;
     cursor: pointer;
   }

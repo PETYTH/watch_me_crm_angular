@@ -1,0 +1,93 @@
+@import "../../../styles";
+
+#evolution{
+  color: $iconColor;
+  .bubble{
+    border: 1px solid black;
+    border-radius: 22px;
+    background: $bgBubbles;
+
+    &.huge{
+      width: 1129px; // 740px
+      height: 29rem; // 464px
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .overall{
+        border-radius: 22px;
+        height: 100%;
+        width: 100%;
+
+        .evolution-head{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 2rem 2.7rem;
+          cursor: default;
+
+          .evo-head-container{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            .evo-title{
+              font-family: $fontTitre;
+              font-size: $sizeTitre;
+            }
+
+            .evo-subtitle{
+              font-family: $fontSousTitre;
+              font-size: $sizeSousTitre;
+            }
+          }
+
+          .buttons{
+            display: flex;
+            gap: 71px;
+
+            .filter-btn{
+              width: fit-content;
+              height: fit-content;
+              border-radius: 22px;
+              display: flex;
+              align-items: center;
+              gap: 3.25rem;
+              background: $blueBtns;
+              font-size: 15px;
+              padding: 0 1rem;
+              cursor: pointer;
+            }
+
+            .filter-more, .add-btn{
+              font-size: 20px;
+            }
+            .add-btn{
+              cursor: pointer;
+            }
+          }
+        }
+
+        .data-table{
+          margin: 0 auto;
+          width: 95%;
+          border: 2px solid grey;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          table{
+            border: 2px solid black;
+
+            th{
+              border: 2px solid blue;
+            }
+
+            td{
+              border: 2px solid red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
