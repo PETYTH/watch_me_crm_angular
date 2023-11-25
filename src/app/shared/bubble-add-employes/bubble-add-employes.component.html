@@ -1,1 +1,35 @@
-<p>bubble-add-employes works!</p>
+
+<div class="container">
+    <form>
+        <div class="name">
+            <div class="input-group">
+              <input type="text" id="nom" name="nom" required placeholder="Nom">
+            </div>
+      
+            <div class="input-group">
+              <input type="text" id="prenom" name="prenom" required placeholder="Prénom">
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="input-group">
+              <input type="email" id="email" name="email" required placeholder="emailduboss@gmail.com">
+            </div>
+      
+            <div class="input-group">
+              <input type="date" id="dob" name="dob" required>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <select id="status" name="status" required>
+              <option value="active">Status</option>
+              <option value="inactive">Inactif</option>
+            </select>
+        </div>
+
+        <button type="submit" class="submit-button">Valider</button>
+    </form>
+
+    <p>Après validation, l'employé recevra un mail pour modifier son mot de passe.</p>
+  </div>
