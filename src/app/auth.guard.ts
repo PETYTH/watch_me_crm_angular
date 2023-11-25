@@ -19,8 +19,8 @@ export class AuthGuard implements CanActivate {
       console.log('Utilisateur connecté');
 
       if (state.url === '/auth/connexion/form') {
-        console.log('Redirection vers le tableau de bord');
-        this.router.navigate(['/dashboard']);
+        console.log('Redirection vers la page d\'acceuil');
+        this.router.navigate(['/']);
         return false;
       }
 
