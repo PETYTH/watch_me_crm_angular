@@ -11,6 +11,9 @@ import { BubbleNbEntrepriseComponent } from './bubble-nb-entreprise/bubble-nb-en
 import { BubbleInfosUtileComponent } from './bubble-infos-utile/bubble-infos-utile.component';
 import { BubbleChartsComponent } from './bubble-charts/bubble-charts.component';
 import { BubbleEvolutionStatsComponent } from './bubble-evolution-stats/bubble-evolution-stats.component';
+import { BubbleListComponent } from './bubble-list/bubble-list.component';
+import { BubbleAddEmployesComponent } from './bubble-add-employes/bubble-add-employes.component';
+import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-employes.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,12 @@ import { BubbleEvolutionStatsComponent } from './bubble-evolution-stats/bubble-e
     BubbleInfosUtileComponent,
     BubbleChartsComponent,
     BubbleEvolutionStatsComponent,
+    BubbleListComponent,
+    BubbleAddEmployesComponent,
+    BubbleEditEmployesComponent,
+    BubbleListComponent,
+    BubbleAddEmployesComponent,
+    BubbleEditEmployesComponent,
   ],
   exports: [
     SidebarComponent,
@@ -33,6 +42,9 @@ import { BubbleEvolutionStatsComponent } from './bubble-evolution-stats/bubble-e
     BubbleChartsComponent,
     BubbleInfosUtileComponent,
     BubbleEvolutionStatsComponent,
+    BubbleListComponent,
+    BubbleAddEmployesComponent,
+    BubbleEditEmployesComponent,
   ],
   imports: [
     CommonModule,
