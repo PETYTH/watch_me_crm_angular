@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class BubbleChartsComponent {
 
+  options: string[] = ["Option 1", "Option 2", "Option 3"]; // Mettez vos options réelles ici
+  menuVisible = false;
+
+  toggleMenu() {
+    this.menuVisible = !this.menuVisible;
+  }
 }

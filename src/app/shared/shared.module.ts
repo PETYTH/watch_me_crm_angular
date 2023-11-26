@@ -11,6 +11,7 @@ import { BubbleNbEntrepriseComponent } from './bubble-nb-entreprise/bubble-nb-en
 import { BubbleInfosUtileComponent } from './bubble-infos-utile/bubble-infos-utile.component';
 import { BubbleChartsComponent } from './bubble-charts/bubble-charts.component';
 import { BubbleEvolutionStatsComponent } from './bubble-evolution-stats/bubble-evolution-stats.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BubbleEvolutionStatsComponent } from './bubble-evolution-stats/bubble-e
   imports: [
     CommonModule,
     RouterLink,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
 })

@@ -7,12 +7,24 @@ import { Component } from '@angular/core';
 })
 export class BubbleEvolutionStatsComponent {
 
+  modifIcon : string = "fa-solid fa-pen";
+  deleteIcon : string = "fa-solid fa-trash";
+
+  options: string[] = ["Option 1", "Option 2", "Option 3"]; // Mettez vos options réelles ici
+  menuVisible = false;
+
+  toggleMenu() {
+    this.menuVisible = !this.menuVisible;
+  }
+
   tableData: { [key: string]: string[] } = {
     "row1": ["data 1", "data 2", "data 3", "data 4", "data 5"],
     "row2": ["data 6", "data 7", "data 8"],
-    "Actions": ["modif", "supprimer"],
+    "row3": ["data 9", "data 10", "data 11", "data 12"],
     // Ajoutez d'autres lignes au besoin
   };
+
+
 
   get tableHeaders(): string[] {
     return Object.keys(this.tableData);
@@ -27,14 +39,8 @@ export class BubbleEvolutionStatsComponent {
       const newRow: string[] = [];
       for (let j = 0; j < numRows; j++) {
         const key = this.tableHeaders[j];
-        if (key === "Actions") {
-          // Répéter les valeurs de la clé "Actions"
-          const actionsValues = this.tableData["Actions"];
-          newRow.push(actionsValues[i % actionsValues.length]);
-        } else {
-          newRow.push(this.tableData[key][i]);
+        newRow.push(this.tableData[key][i]);
         }
-      }
       transposedData.push(newRow);
     }
     return transposedData;

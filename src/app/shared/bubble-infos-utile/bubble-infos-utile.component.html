@@ -5,8 +5,21 @@
         <div class="title-utile">
           <h2 class="title">Titre</h2>
         </div>
-        <div class="more-btn">
-          <div class="filter-more"><i class="fa-solid fa-angle-down"></i></div>
+
+        <div class="buttons">
+          <div class="filter-infos">
+            <div [ngClass]="{ 'filter-btn': !menuVisible, 'open': menuVisible }" (click)="toggleMenu()" >
+              <span>Filtres</span>
+              <div class="filter-more"><i class="fa-solid fa-angle-down"></i></div>
+            </div>
+
+            <div class="filter-menu" *ngIf="menuVisible">
+              <div class="visible" *ngFor="let option of options">
+                {{ option }}
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 

@@ -21,30 +21,80 @@
 
         .title-container{
           margin: 0 auto;
+          padding: 0 1rem;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-end;
           gap: 19px;
 
           .title-utile{
             margin: 2rem 0;
-            padding-right: 19px;
-            width: 60%;
-            text-align: right;
 
             .title{
               font-family: $fontTitre;
               font-size: $sizeTitre;
             }
           }
-          .more-btn{
-            padding: 0 1.5rem;
-            border-radius: 22px;
-            background: $blueBtns;
-            margin-right: 13px;
 
-            .filter-more{
-              font-size: $sizeSousTitre;
+          .buttons{
+            display: flex;
+            gap: 71px;
+
+            .filter-infos{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 1rem;
+              position: relative;
+
+              .filter-btn{
+                width: fit-content;
+                height: fit-content;
+                border-radius: 22px;
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                background: $blueBtns;
+                font-size: 15px;
+                padding: 0 1rem;
+                cursor: pointer;
+              }
+
+              .open{
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                background: $blueBtns;
+                font-size: 15px;
+                padding: 0 1rem;
+                cursor: pointer;
+                border-radius: 15px 15px 0 0;
+              }
+
+              .filter-more, .add-btn{
+                font-size: 20px;
+              }
+              .add-btn{
+                cursor: pointer;
+              }
+
+              .filter-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                padding: .5rem 0;
+                gap: 1rem;
+                background: $blueBtns;
+                width: 100%;
+                text-align: center;
+                border-bottom-left-radius: 22px;
+                border-bottom-right-radius: 22px;
+                transition: all 1s;
+              }
             }
           }
         }
