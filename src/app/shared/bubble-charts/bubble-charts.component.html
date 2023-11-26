@@ -1,1 +1,27 @@
-<p>bubble-charts works!</p>
+<section id="charts">
+  <div class="bubble big">
+    <div class="overall">
+      <div class="chart-head">
+        <div class="buttons">
+          <div class="filter-infos">
+            <div [ngClass]="{ 'filter-btn': !menuVisible, 'open': menuVisible }" (click)="toggleMenu()" >
+              <span>Filtres</span>
+              <div class="filter-more"><i class="fa-solid fa-angle-down"></i></div>
+            </div>
+
+            <div class="filter-menu" *ngIf="menuVisible">
+              <div class="visible" *ngFor="let option of options">
+                {{ option }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-display"></div>
+      </div>
+    </div>
+  </div>
+</section>
+

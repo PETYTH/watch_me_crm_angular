@@ -1,1 +1,42 @@
-<p>bubble-infos-utile works!</p>
+<section id="infos-utiles">
+  <div class="bubble medium">
+    <div class="overall">
+      <div class="title-container">
+        <div class="title-utile">
+          <h2 class="title">Titre</h2>
+        </div>
+
+        <div class="buttons">
+          <div class="filter-infos">
+            <div [ngClass]="{ 'filter-btn': !menuVisible, 'open': menuVisible }" (click)="toggleMenu()" >
+              <span>Filtres</span>
+              <div class="filter-more"><i class="fa-solid fa-angle-down"></i></div>
+            </div>
+
+            <div class="filter-menu" *ngIf="menuVisible">
+              <div class="visible" *ngFor="let option of options">
+                {{ option }}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="subtitle-utile">
+        <h3 class="subtitle">Sous-titre</h3>
+      </div>
+
+      <div class="infos-container">
+        <ul class="list-infos">
+          <li>Information utile numéro 1</li>
+          <li>Information utile numéro 2</li>
+          <li>Information utile numéro 3</li>
+          <li>Information utile numéro 4</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+

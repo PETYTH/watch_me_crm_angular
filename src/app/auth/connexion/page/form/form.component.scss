@@ -44,9 +44,10 @@ h1{
     color: #F2F2F2;
     cursor: pointer;
     position: absolute;
-    font-size: 30px;
     top: 15px;
     left: 20px;
+    font-size: 27px;
+    transition: color .5s;
 }
 
 .exit:hover{

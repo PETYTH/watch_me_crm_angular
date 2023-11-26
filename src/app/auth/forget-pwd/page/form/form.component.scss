@@ -50,12 +50,13 @@ h3{
 }
 
 .exit{
-    color: #F2F2F2;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    font-size: 30px;
-    left: 20px;
+  color: #F2F2F2;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 27px;
+  transition: color .5s;
 }
 
 .exit:hover{
@@ -106,6 +107,7 @@ label{
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 50px;
+    transition: background .5s;
 }
 
 .button-connexion:hover{

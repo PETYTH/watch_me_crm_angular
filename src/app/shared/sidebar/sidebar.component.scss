@@ -29,14 +29,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; 
-  width: 80px; 
-  height: 80px; 
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
   text-align: center;
   margin: 0 auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
-  
+
   &.user-logo{
     background: url("/assets/img/user.png") center/cover no-repeat;
   }
@@ -77,6 +77,7 @@
 
 .iconLogout{
   transform: scaleX(-1);
+  font-size: 20px;
 }
 
 .flex, .infoflex{

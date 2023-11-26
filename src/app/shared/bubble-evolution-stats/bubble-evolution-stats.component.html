@@ -1,1 +1,60 @@
-<p>bubble-evolution-stats works!</p>
+<section id="evolution">
+  <div class="bubble huge">
+    <div class="overall">
+      <div class="evolution-head">
+        <div class="evo-head-container">
+
+          <div class="evo-title">
+            <h2 class="title">Titre</h2>
+          </div>
+
+          <div class="evo-subtitle">
+            <h3 class="subtitle">Sous-Titre</h3>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div class="filter-infos">
+            <div [ngClass]="{ 'filter-btn': !menuVisible, 'open': menuVisible }" (click)="toggleMenu()" >
+              <span>Filtres</span>
+              <div class="filter-more"><i class="fa-solid fa-angle-down"></i></div>
+            </div>
+
+            <div class="filter-menu" *ngIf="menuVisible">
+              <div class="visible" *ngFor="let option of options">
+                {{ option }}
+              </div>
+            </div>
+          </div>
+
+          <div class="add-btn">
+            <div class="add-btn"><i class="fa-solid fa-circle-plus"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-table">
+        <table>
+          <thead>
+          <tr>
+            <th *ngFor="let header of tableHeaders">{{ header }}</th>
+            <th colspan="2">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let row of tableRows">
+            <td *ngFor="let cell of row">
+              {{ cell }}
+            </td>
+            <td><i class="{{modifIcon}}"></i></td>
+            <td><i class="{{deleteIcon}}"></i></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,41 @@
+@import "../../../styles";
+
+#nb-entreprises{
+  color: $iconColor;
+  .bubble{
+    border: 1px solid black;
+    border-radius: 22px;
+    background: $bgBubbles;
+    font-size: 25px;
+
+    &.small{
+      width: 22rem; // 351px
+      height: 7.4rem; // 118px
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .overall{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 50%;
+        width: 100%;
+
+        .title-container{
+          width: 55%;
+          text-align: center;
+          padding: .5rem;
+          font-size: 25px;
+        }
+        .number-container{
+          width: 35%;
+          text-align: center;
+          padding: .5rem;
+          font-weight: bold;
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
