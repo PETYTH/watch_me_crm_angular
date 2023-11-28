@@ -12,21 +12,30 @@
   
     form {
       margin-top: 0;
-
+      
       .name{
         display: flex;
-       
+        
       }
-
+      
       .info{
         display: flex;
       }
-
+      
       .input-group {
+        position: relative;
         margin-bottom: 15px;
+
+        .icon-container {
+          position: absolute;
+          top: 50;
+          left: 0;
+          padding: 10px;
+        }
 
         ::placeholder{
             color: $iconColor;
+            font-style: italic;
         }
     
         input,
@@ -39,6 +48,13 @@
           border: none;
           border-radius: 5px;
           margin-top: 5px;
+          
+          height: 40px;
+          border-radius: 1rem; 
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          padding: 0 2rem;
+          display: flex;
+          margin-bottom: 25px;
         }
       }
     
