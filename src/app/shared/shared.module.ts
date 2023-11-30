@@ -12,6 +12,10 @@ import { BubbleInfosUtileComponent } from './bubble-infos-utile/bubble-infos-uti
 import { BubbleChartsComponent } from './bubble-charts/bubble-charts.component';
 import { BubbleEvolutionStatsComponent } from './bubble-evolution-stats/bubble-evolution-stats.component';
 import { FormsModule } from '@angular/forms';
+import { BubbleListComponent } from './bubble-list/bubble-list.component';
+import { BubbleAddEmployesComponent } from './bubble-add-employes/bubble-add-employes.component';
+import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-employes.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +28,12 @@ import { FormsModule } from '@angular/forms';
     BubbleInfosUtileComponent,
     BubbleChartsComponent,
     BubbleEvolutionStatsComponent,
+    BubbleListComponent,
+    BubbleAddEmployesComponent,
+    BubbleEditEmployesComponent,
+    BubbleListComponent,
+    BubbleAddEmployesComponent,
+    BubbleEditEmployesComponent,
   ],
   exports: [
     SidebarComponent,
@@ -34,6 +44,9 @@ import { FormsModule } from '@angular/forms';
     BubbleChartsComponent,
     BubbleInfosUtileComponent,
     BubbleEvolutionStatsComponent,
+    BubbleListComponent,
+    BubbleAddEmployesComponent,
+    BubbleEditEmployesComponent,
   ],
   imports: [
     CommonModule,

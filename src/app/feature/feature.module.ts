@@ -17,7 +17,7 @@ import {SharedModule} from "../shared/shared.module";
     RouterModule,
     CommonModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
 })
