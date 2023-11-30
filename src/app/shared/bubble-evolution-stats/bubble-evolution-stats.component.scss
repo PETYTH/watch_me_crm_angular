@@ -80,11 +80,8 @@
                 border-radius: 15px 15px 0 0;
               }
 
-              .filter-more, .add-btn{
+              .filter-more{
                 font-size: 20px;
-              }
-              .add-btn{
-                cursor: pointer;
               }
 
               .filter-menu {
@@ -103,6 +100,10 @@
                 transition: all 1s;
               }
             }
+            .add-btn {
+              cursor: pointer;
+              font-size: 20px;
+            }
           }
         }
 
@@ -112,23 +113,28 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          border: 2px dashed aqua;
 
           table{
             width: 100%;
             text-align: center;
-            margin: 0 auto;
+            padding-right: 6rem;
+            background: lime;
 
             th{
               padding: 1rem 0;
               text-transform: capitalize;
               width: fit-content;
               font-size: 20px;
-
             }
             td{
               padding: .5rem;
               width: fit-content;
               font-size: 17px;
+            }
+            .actions{
+              background: red;
+              width: 1%;
             }
           }
         }
