@@ -44,6 +44,7 @@ export class FormComponent {
         },
         (error) => {
           console.error('Échec de la connexion :', error);
+
         }
       );
     }
