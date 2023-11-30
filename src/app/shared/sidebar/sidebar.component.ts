@@ -50,7 +50,7 @@ export class SidebarComponent{
     logoutUser(): void {
         // Créer les en-têtes nécessaires
         const headers = new HttpHeaders({
-            'Authorization': 'Bearer ' + localStorage.getItem('userToken'),
+            'Authorization': 'Bearer ' + sessionStorage.getItem('userToken'),
             'Content-Type': 'application/json',
         });
 

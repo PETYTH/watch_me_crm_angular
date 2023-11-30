@@ -12,21 +12,21 @@ export class AuthService {
 
   constructor(private router: Router) {
     // Charger les informations de l'utilisateur depuis le localStorage lors de l'initialisation du service
-    const storedUserInfo = localStorage.getItem(this.USER_INFO_KEY);
+    const storedUserInfo = sessionStorage.getItem(this.USER_INFO_KEY);
     if (storedUserInfo) {
       this.userInfo = JSON.parse(storedUserInfo);
     }
   }
 
   isAuthenticated(): boolean {
-    return localStorage.getItem(this.TOKEN_KEY) !== null;
+    return sessionStorage.getItem(this.TOKEN_KEY) !== null;
   }
 
   login(token: string, firstName: string, lastName: string): void {
-    localStorage.setItem(this.TOKEN_KEY, token);
+    sessionStorage.setItem(this.TOKEN_KEY, token);
     this.userInfo = { firstName, lastName };
     // Enregistrer les informations de l'utilisateur dans le localStorage
-    localStorage.setItem(this.USER_INFO_KEY, JSON.stringify(this.userInfo));
+    sessionStorage.setItem(this.USER_INFO_KEY, JSON.stringify(this.userInfo));
     this.isAuthenticatedValue = true;
   }
 
@@ -35,8 +35,8 @@ export class AuthService {
   }
 
   logout(): void {
-    localStorage.removeItem(this.TOKEN_KEY);
-    localStorage.removeItem(this.USER_INFO_KEY);
+    sessionStorage.removeItem(this.TOKEN_KEY);
+    sessionStorage.removeItem(this.USER_INFO_KEY);
     this.isAuthenticatedValue = false;
     this.router.navigate(['/auth/connexion/form']);
   }
