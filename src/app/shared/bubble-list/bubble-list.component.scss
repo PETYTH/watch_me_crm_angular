@@ -14,8 +14,21 @@
         justify-content: space-between;
         padding: 1rem;
 
+        @media (max-width: 500px){
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+          }
+
         .button{
-            
+            @media (max-width: 700px){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 10px;
+              }
+           
             .filter-button{
                 background-color: $blueBtns;
                 color: $iconColor;
@@ -23,6 +36,11 @@
                 border-radius: 1rem; 
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
                 height: 1.5rem;
+                border: none;
+
+                @media (max-width: 700px){
+                    width: 5rem;
+                  }
 
                 i{
                     padding-left: 1rem;
@@ -41,7 +59,11 @@
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
                 margin-left: 4rem;
                 height: 1.5rem;
+                border: none;
 
+                @media (max-width: 700px){
+                    width: 5rem;
+                  }
             }
 
             .add-button:hover{
@@ -70,8 +92,12 @@
 
             tbody {
                 transition: background-color 0.3s ease;
-                margin-top: 1rem;
 
+                tr{
+                    margin-top: 1rem;
+                    border-radius: 1rem;
+                }
+                
                 &:hover {
                     background-color: $blueBtns;
                 }
