@@ -8,8 +8,9 @@
     background: $bgBubbles;
 
     &.medium{
-      width: 22rem; // 351px
-      height: 29rem; // 464px
+      //width: 22rem; // 351px
+      //height: 29rem; // 464px
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -120,6 +121,7 @@
             justify-content: center;
             gap: 35px;
             padding: .5rem 0;
+            margin-bottom: 2rem;
 
             li{
               font-family: $fontTxt;

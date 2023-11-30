@@ -22,6 +22,18 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-right: 83px;
+
+      .dash-chart{
+        width: 65%;
+      }
+
+      .dash-infos-utiles{
+        width: 30%;
+      }
+    }
+
+    .dash-evolution{
+      width: 93%;
     }
   }
 }

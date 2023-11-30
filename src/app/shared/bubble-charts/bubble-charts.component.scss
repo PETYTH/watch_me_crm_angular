@@ -2,13 +2,15 @@
 
 #charts{
   color: $iconColor;
+  background: brown;
+
   .bubble{
     border: 1px solid black;
     border-radius: 22px;
     background: $bgBubbles;
 
     &.big{
-      width: 46.25rem; // 740px
+      //width: 46.25rem; // 740px
       height: 29rem; // 464px
       display: flex;
       justify-content: center;
@@ -104,3 +106,5 @@
     }
   }
 }
+
+

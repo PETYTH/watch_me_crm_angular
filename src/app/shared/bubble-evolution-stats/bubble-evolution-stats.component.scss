@@ -9,8 +9,8 @@
     background: $bgBubbles;
 
     &.huge{
-      width: 1129px; // 740px
-      min-height: 29rem; // 464px;
+      //width: 1129px; // 740px
+      //min-height: 29rem; // 464px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -116,13 +116,19 @@
           table{
             width: 100%;
             text-align: center;
+            margin: 0 auto;
 
             th{
-              padding: 1rem;
-            }
+              padding: 1rem 0;
+              text-transform: capitalize;
+              width: fit-content;
+              font-size: 20px;
 
+            }
             td{
               padding: .5rem;
+              width: fit-content;
+              font-size: 17px;
             }
           }
         }
