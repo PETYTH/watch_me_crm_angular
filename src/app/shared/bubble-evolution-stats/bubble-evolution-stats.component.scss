@@ -113,13 +113,11 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          border: 2px dashed aqua;
 
           table{
             width: 100%;
             text-align: center;
             padding-right: 6rem;
-            background: lime;
 
             th{
               padding: 1rem 0;
@@ -133,8 +131,13 @@
               font-size: 17px;
             }
             .actions{
-              background: red;
               width: 1%;
+              cursor: pointer;
+              transition: all .5s;
+
+              &:hover{
+                color: $blueBtns;
+              }
             }
           }
         }
