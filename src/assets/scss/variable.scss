@@ -10,7 +10,19 @@ $orangeBtnHover : #FB6316;
 $violetDashboardInput : #5F366F;
 $mainBlack : #111;
 $bgBubbles : #43264F;
+
 $blackpure : #000;
+
+$boxShadow : #201225;
+
+$boxShadowBubbles: inset 0px -23px 25px 0px rgba($boxShadow, 0.17),
+inset 0px -36px 30px 0px rgba($boxShadow, 0.15),
+inset 0px -79px 40px 0px rgba($boxShadow, 0.1),
+0px 2px 1px rgba($boxShadow, 0.06),
+0px 4px 2px rgba($boxShadow, 0.09),
+0px 8px 4px rgba($boxShadow, 0.09),
+0px 16px 8px rgba($boxShadow, 0.09),
+0px 32px 16px rgba($boxShadow, 0.09);
 
 $changeBlackDashboardInput: #474747;
 
@@ -40,4 +52,3 @@ $fontTxt : Playfair Display;
 $sizeTxt : 20px;
 
 $weightNormal : 400;
-

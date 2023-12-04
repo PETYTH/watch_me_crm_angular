@@ -3,14 +3,14 @@
 #nb-entreprises{
   color: $iconColor;
   .bubble{
-    border: 1px solid black;
     border-radius: 22px;
     background: $bgBubbles;
     font-size: 25px;
+    box-shadow: $boxShadowBubbles;
 
     &.small{
-      width: 22rem; // 351px
-      height: 7.4rem; // 118px
+      width: 90%;
+      padding: 1rem 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -19,8 +19,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 50%;
-        width: 100%;
+        min-width: 25%;
 
         .title-container{
           width: 55%;
@@ -34,6 +33,23 @@
           padding: .5rem;
           font-weight: bold;
           font-size: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  #nb-entreprises {
+    .bubble {
+      &.small {
+        width: 100%;
+        .overall{
+          flex-direction: column;
+
+          .title-container, .number-container{
+            width: 100%;
+          }
         }
       }
     }

@@ -4,17 +4,17 @@
       <div class="chart-head">
         <div class="buttons">
           <div class="filter-infos">
-            <div [ngClass]="{ 'filter-btn': !menuVisible, 'open': menuVisible }" (click)="toggleMenu()" >
-              <span>Filtres</span>
-              <div class="filter-more"><i class="fa-solid fa-angle-down"></i></div>
-            </div>
-
-            <div class="filter-menu" *ngIf="menuVisible">
-              <div class="visible" *ngFor="let option of options">
-                {{ option }}
-              </div>
-            </div>
+            <select>
+              <option value="defaut">Filtres</option>
+              <option value="opt">Option 1</option>
+              <option value="opt">Option 2</option>
+              <option value="opt">Option 3</option>
+              <option value="opt">Option 4</option>
+              <option value="opt">Option 5</option>
+              <option value="opt">Option 6</option>
+            </select>
           </div>
+
         </div>
       </div>
 
@@ -24,4 +24,3 @@
     </div>
   </div>
 </section>
-

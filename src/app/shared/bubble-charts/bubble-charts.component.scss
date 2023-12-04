@@ -2,13 +2,13 @@
 
 #charts{
   color: $iconColor;
+
   .bubble{
-    border: 1px solid black;
     border-radius: 22px;
     background: $bgBubbles;
+    box-shadow: $boxShadowBubbles;
 
     &.big{
-      width: 46.25rem; // 740px
       height: 29rem; // 464px
       display: flex;
       justify-content: center;
@@ -30,58 +30,17 @@
 
             .filter-infos{
               display: flex;
-              flex-direction: column;
               align-items: center;
-              gap: 1rem;
-              position: relative;
+              background: $blueBtns;
+              padding: 0 1rem;
+              border-radius: 22px;
 
-              .filter-btn{
-                width: fit-content;
-                height: fit-content;
-                border-radius: 22px;
-                display: flex;
-                align-items: center;
-                gap: 3.25rem;
+              select{
                 background: $blueBtns;
-                font-size: 15px;
-                padding: 0 1rem;
-                cursor: pointer;
-              }
-
-              .open{
-                width: fit-content;
-                height: fit-content;
-                display: flex;
-                align-items: center;
-                gap: 3.25rem;
-                background: $blueBtns;
-                font-size: 15px;
-                padding: 0 1rem;
-                cursor: pointer;
-                border-radius: 15px 15px 0 0;
-              }
-
-              .filter-more, .add-btn{
+                color: $iconColor;
+                border: none;
                 font-size: 20px;
-              }
-              .add-btn{
-                cursor: pointer;
-              }
-
-              .filter-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                padding: .5rem 0;
-                gap: 1rem;
-                background: $blueBtns;
-                width: 100%;
-                text-align: center;
-                border-bottom-left-radius: 22px;
-                border-bottom-right-radius: 22px;
-                transition: all 1s;
+                outline: none;
               }
             }
           }
@@ -94,7 +53,7 @@
           height: 81.5%;
 
           .chart-display{
-            background: magenta;
+            background: blueviolet;
             width: 95%;
             height: 95%;
             margin: 0 auto;
@@ -104,3 +63,5 @@
     }
   }
 }
+
+
