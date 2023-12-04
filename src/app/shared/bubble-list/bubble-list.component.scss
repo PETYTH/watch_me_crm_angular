@@ -38,6 +38,7 @@
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
                 height: 1.5rem;
                 border: none;
+                text-align: center;
 
                 @media (max-width: 700px){
                     width: 5rem;
@@ -78,7 +79,6 @@
         max-width: 100%;
         border-radius: 1rem;
         transition: background-color 0.3s ease;
-        scrollbar-color: $blueBtns $iconColor; 
 
         &::-webkit-scrollbar {
              width: 100%;
@@ -105,6 +105,7 @@
 
                 .icons{
                     display: flex;
+                    gap: 10px;
 
                     i {
                         padding: 0.5rem;
