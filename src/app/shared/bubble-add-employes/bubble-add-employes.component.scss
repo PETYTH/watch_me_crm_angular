@@ -14,17 +14,17 @@
     @media (max-width: 930px){
       margin: 10px;
     }
-  
+
     form {
       margin-top: 0;
-      
+
       .name{
         display: flex;
         gap: 15px;
         margin-top: 15px;
 
         @media (max-width: 700px){
-          display: block; 
+          display: block;
         }
       }
 
@@ -33,17 +33,16 @@
         gap: 15px;
 
         @media (max-width: 700px){
-          display: block; 
+          display: block;
         }
       }
-      
+
       .input-group {
         position: relative;
-        margin-bottom: 15px;
         display: flex;
         align-items: center;
         margin-bottom: 25px;
-      
+
         i {
           position: absolute;
           padding: 10px;
@@ -53,31 +52,28 @@
             color: $iconColor;
             font-style: italic;
         }
-    
+
         input,
         select {
           width: 100%;
-          padding: 10px;
-          box-sizing: border-box;
           background-color: $violetDashboardInput;
           color: $iconColor;
           border: none;
-          border-radius: 5px;
-          margin-top: 5px;
-          height: 40px;
-          border-radius: 1rem; 
-          padding: 0 2rem;
-          display: flex;
+          border-radius: 1rem;
+          padding: 10px 2rem;
           min-width: 250px;
-          box-shadow: 4px 4px 4px 0px #00000032;
-          // font-weight: bold;
+          box-shadow: 4px 4px 4px 0 #00000032;
+          outline: none;
 
           @media (max-width: 700px){
-            min-width: 10px; 
+            min-width: 10px;
           }
         }
+        select:hover{
+          cursor: pointer;
+        }
       }
-    
+
       .submit-button {
         background-color: $blueBtns;
         color: $iconColor;
@@ -91,15 +87,15 @@
         box-shadow: 4px 4px 4px 0px #00000032;
 
         @media (max-width: 700px){
-          padding: 9px 30px; 
+          padding: 9px 30px;
         }
-    
+
         &:hover {
           background-color: $orangeBtnHover;
         }
       }
     }
-  
+
     p {
       margin-top: 15px;
       margin-bottom: 10px;
@@ -107,11 +103,12 @@
       text-align: center;
 
        @media (max-width: 700px){
-          font-size: 10px; 
+          font-size: 10px;
         }
 
       &:hover{
         text-decoration: underline;
+        cursor: default;
       }
     }
 }
