@@ -5,10 +5,12 @@ import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import {ListComponent} from "./page/list/list.component";
 import { SharedModule } from '../../shared/shared.module';
+import { ViewComponent } from './page/view/view.component';
 
 @NgModule({
   declarations: [
-    ListComponent
+    ListComponent,
+    ViewComponent
   ],
   imports: [
     EmployesRoutingModule,

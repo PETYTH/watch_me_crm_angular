@@ -37,12 +37,12 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let row of tableRows">
+          <tr *ngFor="let row of tableRows" class="evo-content">
             <td *ngFor="let cell of row">
               {{ cell }}
             </td>
-            <td class="actions modif"><i class="{{modifIcon}}"></i></td>
-            <td class="actions delete"><i class="{{deleteIcon}}"></i></td>
+
+            <td class="actions modif"><i class="{{modifIcon}}"></i> <i class="{{deleteIcon}}"></i></td>
           </tr>
           </tbody>
         </table>

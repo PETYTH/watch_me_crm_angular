@@ -73,23 +73,51 @@
             text-align: center;
 
             thead, tbody{
-              th{
+              th {
                 padding: 1rem 0;
                 text-transform: capitalize;
                 font-size: 20px;
               }
-              td{
-                padding: .5rem;
-                font-size: 17px;
-              }
-              .actions {
-                cursor: pointer;
-                transition: all .5s;
 
-                &:hover {
-                  color: $blueBtns;
+              .evo-content {
+                &:hover:not(.actions) {
+                  background: $blueBtns;
+                }
+
+                td {
+                  padding: .5rem;
+                  font-size: 17px;
+
+                  &:first-child {
+                    border-top-left-radius: 22px;
+                    border-bottom-left-radius: 22px;
+                  }
+
+                  &:last-child {
+                    //background: lime;
+                    border-top-right-radius: 22px;
+                    border-bottom-right-radius: 22px;
+                  }
                 }
               }
+              .actions{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                gap: 2rem;
+                border: 1px solid lime;
+                padding: 1.5rem 0;
+
+                & i{
+                  cursor: pointer;
+                  transition: all .5s;
+
+                  &:hover {
+                    color: $blueBtns;
+                  }
+                }
+              }
+
             }
           }
         }
@@ -112,6 +140,9 @@
           table{
             th, td{
               border: 1px solid grey;
+            }
+            .actions{
+              padding: 2rem 0;
             }
           }
         }

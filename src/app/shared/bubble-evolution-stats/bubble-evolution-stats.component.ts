@@ -22,7 +22,7 @@ export class BubbleEvolutionStatsComponent {
     "row2": ["data 6", "data 7", "data 8"],
     "row3": ["data 9", "data 10", "data 11", "data 12"],
     // Ajoutez d'autres lignes au besoin
-  };
+  }
 
 
 
