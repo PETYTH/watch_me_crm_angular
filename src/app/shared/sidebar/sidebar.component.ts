@@ -68,8 +68,4 @@ export class SidebarComponent{
             }
         );
     }
-
-
-
-
 }

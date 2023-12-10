@@ -21,26 +21,29 @@ export class BubbleEvolutionStatsComponent {
     "row1": ["data 1", "data 2", "data 3", "data 4", "data 5"],
     "row2": ["data 6", "data 7", "data 8"],
     "row3": ["data 9", "data 10", "data 11", "data 12"],
-    // Ajoutez d'autres lignes au besoin
   }
-
-
 
   get tableHeaders(): string[] {
     return Object.keys(this.tableData);
   }
 
   get tableRows(): string[][] {
-    const numRows = this.tableHeaders.length;
-    const numCols = this.tableData[this.tableHeaders[0]].length;
+    // Trouver le nombre maximal de valeurs dans toutes les lignes
+    const maxValues = Math.max(...Object.values(this.tableData).map(row => row.length));
 
+    // Générer les colonnes en utilisant le nombre maximal de valeurs
     const transposedData: string[][] = [];
-    for (let i = 0; i < numCols; i++) {
+    for (let i = 0; i < maxValues; i++) {
       const newRow: string[] = [];
-      for (let j = 0; j < numRows; j++) {
+      for (let j = 0; j < this.tableHeaders.length; j++) {
         const key = this.tableHeaders[j];
-        newRow.push(this.tableData[key][i]);
+        // Vérifier si la valeur existe avant de l'ajouter
+        if (i < this.tableData[key].length) {
+          newRow.push(this.tableData[key][i]);
+        } else {
+          newRow.push(""); // Ajouter une chaîne vide si la valeur n'existe pas
         }
+      }
       transposedData.push(newRow);
     }
     return transposedData;

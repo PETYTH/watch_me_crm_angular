@@ -87,29 +87,17 @@
                 td {
                   padding: .5rem;
                   font-size: 17px;
-
-                  &:first-child {
-                    border-top-left-radius: 22px;
-                    border-bottom-left-radius: 22px;
-                  }
-
-                  &:last-child {
-                    //background: lime;
-                    border-top-right-radius: 22px;
-                    border-bottom-right-radius: 22px;
-                  }
                 }
               }
               .actions{
                 display: flex;
                 justify-content: center;
-                align-content: center;
+                align-items: center;
                 gap: 2rem;
-                border: 1px solid lime;
-                padding: 1.5rem 0;
 
                 & i{
                   cursor: pointer;
+                  padding: .5rem 0;
                   transition: all .5s;
 
                   &:hover {
