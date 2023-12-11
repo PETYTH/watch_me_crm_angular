@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { BubbleListComponent } from './bubble-list/bubble-list.component';
 import { BubbleAddEmployesComponent } from './bubble-add-employes/bubble-add-employes.component';
 import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-employes.component';
+import { BubbleInfosEmployeComponent } from './bubble-infos-employe/bubble-infos-employe.component';
 
 
 @NgModule({
@@ -34,20 +35,22 @@ import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-
     BubbleListComponent,
     BubbleAddEmployesComponent,
     BubbleEditEmployesComponent,
+    BubbleInfosEmployeComponent,
   ],
-  exports: [
-    SidebarComponent,
-    HeaderBoardsComponent,
-    IconFormComponent,
-    BubbleNbEmployesComponent,
-    BubbleNbEntrepriseComponent,
-    BubbleChartsComponent,
-    BubbleInfosUtileComponent,
-    BubbleEvolutionStatsComponent,
-    BubbleListComponent,
-    BubbleAddEmployesComponent,
-    BubbleEditEmployesComponent,
-  ],
+    exports: [
+        SidebarComponent,
+        HeaderBoardsComponent,
+        IconFormComponent,
+        BubbleNbEmployesComponent,
+        BubbleNbEntrepriseComponent,
+        BubbleChartsComponent,
+        BubbleInfosUtileComponent,
+        BubbleEvolutionStatsComponent,
+        BubbleListComponent,
+        BubbleAddEmployesComponent,
+        BubbleEditEmployesComponent,
+        BubbleInfosEmployeComponent,
+    ],
   imports: [
     CommonModule,
     RouterLink,

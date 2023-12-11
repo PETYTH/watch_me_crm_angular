@@ -17,7 +17,7 @@
 
         <div class="flex">
           <div class="espace-icon">
-            <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'"></app-button-link-sidebar>
+            <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/view'"></app-button-link-sidebar>
           </div>
           <div class="espace-texte">
             <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Employés <i class="fa-solid fa-chevron-down"></i></p>
@@ -59,7 +59,7 @@
             <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Sociétés<i class="fa-solid fa-chevron-down"></i></p>
           </div>
         </div>
-        
+
       </div>
     </div>
 
@@ -85,9 +85,7 @@
         <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Se déconnecter</p>
       </div>
     </div>
-
   </div>
-
 </div>
 
 

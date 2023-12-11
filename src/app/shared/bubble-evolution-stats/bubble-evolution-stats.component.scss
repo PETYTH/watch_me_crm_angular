@@ -59,6 +59,7 @@
                 border: none;
                 font-size: 20px;
                 outline: none;
+                cursor: pointer;
               }
             }
           }
@@ -71,23 +72,50 @@
           table{
             width: 100%;
             text-align: center;
+            cursor: default;
 
             thead, tbody{
-              th{
+              th {
                 padding: 1rem 0;
                 text-transform: capitalize;
                 font-size: 20px;
               }
-              td{
-                padding: .5rem;
-                font-size: 17px;
-              }
-              .actions {
-                cursor: pointer;
-                transition: all .5s;
 
+              .evo-content {
                 &:hover {
-                  color: $blueBtns;
+                  background: $blueBtns;
+
+                  td:first-child{
+                    border-top-left-radius: 22px;
+                    border-bottom-left-radius: 22px;
+                  }
+                  .actions{
+                    border-top-right-radius: 22px;
+                    border-bottom-right-radius: 22px;
+                  }
+                }
+
+                td {
+                  padding: .5rem;
+                  font-size: 17px;
+                }
+              }
+              .actions{
+                .modifs{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 2rem;
+                  width: 100%;
+                  & i{
+                    cursor: pointer;
+                    padding: .5rem 0;
+                    transition: all .5s;
+
+                    &:hover {
+                      color: $changeBlueMainColor;
+                    }
+                  }
                 }
               }
             }
@@ -112,6 +140,9 @@
           table{
             th, td{
               border: 1px solid grey;
+            }
+            .actions{
+              padding: 2rem 0;
             }
           }
         }
