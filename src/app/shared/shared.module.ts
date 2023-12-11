@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { BubbleListComponent } from './bubble-list/bubble-list.component';
 import { BubbleAddEmployesComponent } from './bubble-add-employes/bubble-add-employes.component';
 import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-employes.component';
-import { BubbleInfosEmployeComponent } from './bubble-infos-employe/bubble-infos-employe.component';
+import { BubbleAllInfosComponent } from './bubble-all-infos/bubble-all-infos.component';
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { BubbleInfosEmployeComponent } from './bubble-infos-employe/bubble-infos
     BubbleListComponent,
     BubbleAddEmployesComponent,
     BubbleEditEmployesComponent,
-    BubbleInfosEmployeComponent,
+    BubbleAllInfosComponent,
   ],
     exports: [
         SidebarComponent,
@@ -49,7 +49,7 @@ import { BubbleInfosEmployeComponent } from './bubble-infos-employe/bubble-infos
         BubbleListComponent,
         BubbleAddEmployesComponent,
         BubbleEditEmployesComponent,
-        BubbleInfosEmployeComponent,
+        BubbleAllInfosComponent,
     ],
   imports: [
     CommonModule,

@@ -11,6 +11,39 @@
     flex-direction: column;
     gap: 4rem;
 
+    .employe-infos{
+      .main-infos-content{
+        h2{
+          font-weight: bold;
+          font-size: 30px;
+        }
+      }
+
+      .infos1-content, .infos2-content{
+        font-weight: normal;
+        font-size: 22px;
+      }
+
+      .infos3-content{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        overflow: hidden;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .infos4-content{
+        font-size: 23px;
+
+        &:hover{
+          cursor: default;
+        }
+      }
+    }
     .dash-numbers{
       display: flex;
       gap: 2.4rem;
@@ -54,6 +87,24 @@
   }
 }
 
+// mettre plus de padding et mettre un text align center
+@media screen and (max-width: 800px){
+  #employe-view{
+    .dash-wrap{
+      .employe-infos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .infos3-content{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 700px){
   #employe-view{
     .dash-wrap{
@@ -72,6 +123,25 @@
 @media screen and (max-width: 500px){
   #employe-view{
     .dash-wrap{
+      .employe-infos{
+        .main-infos-content{
+          h2{
+            font-size: 20px;
+          }
+        }
+        .infos1-content h3{
+          font-size: 18px;
+        }
+
+        .infos2-content{
+          font-size: 15px;
+        }
+
+        .infos4-content{
+          font-size: 18px;
+        }
+      }
+
       .dash-multiple-infos{
         .dash-infos-utiles{
           width: 100%;

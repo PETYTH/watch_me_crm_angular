@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BubbleInfosEmployeComponent } from './bubble-infos-employe.component';
+import { BubbleAllInfosComponent } from './bubble-all-infos.component';
 
 describe('BubbleInfosEmployeComponent', () => {
-  let component: BubbleInfosEmployeComponent;
-  let fixture: ComponentFixture<BubbleInfosEmployeComponent>;
+  let component: BubbleAllInfosComponent;
+  let fixture: ComponentFixture<BubbleAllInfosComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BubbleInfosEmployeComponent]
+      declarations: [BubbleAllInfosComponent]
     });
-    fixture = TestBed.createComponent(BubbleInfosEmployeComponent);
+    fixture = TestBed.createComponent(BubbleAllInfosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
