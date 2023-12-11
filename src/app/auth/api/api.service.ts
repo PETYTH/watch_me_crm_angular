@@ -22,5 +22,26 @@ export class ApiService {
   logoutUser(headers: HttpHeaders): Observable<any> {
     return this.http.post(`${this.apiUrl}/logout`, {}, { headers });
   }
+
+  getUser(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}/show`);
+  }
+
+  editUser(id: number, userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${id}/user_edit`, userData);
+  }
+
+  forgotPassword(userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/forgot-password`, userData);
+  }
+
+  resetPassword(userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/reset-password`, userData);
+  }
+
+  deleteUser(id: number, userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${id}/user_delete`, userData);
+  }
+
   // Ajoutez d'autres méthodes d'API selon les besoins
 }

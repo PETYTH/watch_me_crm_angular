@@ -41,7 +41,11 @@ export class FormComponent {
             console.log('Connexion réussie :', response);
             // Récupérer le premier élément du tableau de rôles
             const role = response.roles && response.roles.length > 0 ? response.roles[0] : '';
-            this.authService.login(response.token, response.lastName, response.firstName, role);
+            // Obtenez la date d'expiration du token (ici, j'ajoute une heure à la date actuelle)
+            const tokenExpiry = new Date();
+            tokenExpiry.setHours(tokenExpiry.getHours() + 1);
+
+            this.authService.login(response.token, response.lastName, response.firstName, role, tokenExpiry);
 
             this.router.navigate(['/dashboard']);
           },

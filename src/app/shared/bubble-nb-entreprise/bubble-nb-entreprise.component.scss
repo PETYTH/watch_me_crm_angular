@@ -4,7 +4,10 @@
   color: $iconColor;
   .bubble{
     border-radius: 22px;
-    background: $bgBubbles;
+    //background: $bgBubbles;
+    background-image: url('/assets/img/bg-connexion.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     font-size: 25px;
     box-shadow: $boxShadowBubbles;
 
