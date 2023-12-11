@@ -1,128 +1,137 @@
 @import "../../../styles";
 
-.card-commande {
-    margin: 20px;
-    background: $mainColor;
-    color: $iconColor;
-    border-radius: 1rem;
-    width: 80%;
-    margin: 0 auto;
-    padding: 1.5rem;
-    box-shadow: rgba($boxShadow, 0.17) 0px -23px 25px 0px inset, rgba($boxShadow, 0.15) 0px -36px 30px 0px inset, rgba($boxShadow, 0.1) 0px -79px 40px 0px inset, rgba($boxShadow, 0.06) 0px 2px 1px, rgba($boxShadow, 0.09) 0px 4px 2px, rgba($boxShadow, 0.09) 0px 8px 4px, rgba($boxShadow, 0.09) 0px 16px 8px, rgba($boxShadow, 0.09) 0px 32px 16px;
-    
-    .head-commande{
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem;
+#evolution{
+  color: $iconColor;
+  margin-bottom: 2rem;
+  .bubble{
+    border-radius: 22px;
+    background: $bgBubbles;
+    box-shadow: $boxShadowBubbles;
 
-        @media (max-width: 500px){
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-          }
+    &.huge{
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        .button{
-            @media (max-width: 890px){
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-end;
-                gap: 10px;
-              }
-           
-            .filter-button{
-                background-color: $blueBtns;
-                color: $iconColor;
-                width: 7rem;
-                border-radius: 1rem; 
-                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-                height: 1.5rem;
-                border: none;
-                text-align: center;
+      .overall{
+        border-radius: 22px;
+        height: 100%;
+        width: 100%;
 
-                @media (max-width: 700px){
-                    width: 5rem;
-                  }
-
-                i{
-                    padding-left: 1rem;
-                }
-            }
-
-            .filter-button:hover{
-                background: $orangeBtnHover;
-            }
-
-            .add-button{
-                background-color: $blueBtns;
-                color: $iconColor;
-                width: 7rem;
-                border-radius: 1rem; 
-                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-                margin-left: 4rem;
-                height: 1.5rem;
-                border: none;
-
-                @media (max-width: 700px){
-                    width: 5rem;
-                  }
-            }
-
-            .add-button:hover{
-                background: $orangeBtnHover;
-            }
-        }
-    }
-
-    .data-table{
-        margin: 0 auto 2rem;
-        width: 90%;
-
-        table{
-          width: 100%;
-          text-align: center;
+        .evolution-head{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 2rem 2.7rem;
           cursor: default;
 
-          thead, tbody{
-            th {
-              padding: 1rem 0;
-              text-transform: capitalize;
-              font-size: 20px;
+          .evo-head-container{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .evo-title{
+              font-family: $fontTitre;
+              font-size: $sizeTitre;
             }
 
-            .evo-content {
-              &:hover {
+            .evo-subtitle{
+              font-family: $fontSousTitre;
+              font-size: $sizeSousTitre;
+            }
+          }
+
+
+          .buttons{
+            display: flex;
+            gap: 71px;
+
+            .filter-infos{
+              display: flex;
+              align-items: center;
+              background: $blueBtns;
+              padding: 0 1rem;
+              border-radius: 22px;
+
+              select{
                 background: $blueBtns;
-
-                td:first-child{
-                  border-top-left-radius: 22px;
-                  border-bottom-left-radius: 22px;
-                }
-                .actions{
-                  border-top-right-radius: 22px;
-                  border-bottom-right-radius: 22px;
-                }
-              }
-
-              td {
-                padding: .5rem;
-                font-size: 17px;
+                color: $iconColor;
+                border: none;
+                font-size: 20px;
+                outline: none;
+                cursor: pointer;
               }
             }
-            .actions{
-              .modifs{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                width: 100%;
-                & i{
-                  cursor: pointer;
-                  padding: .5rem 0;
-                  transition: all .5s;
 
-                  &:hover {
-                    color: $changeBlueMainColor;
+            .ajout{
+                display: flex;
+                align-items: center;
+                background: $blueBtns;
+                padding: 0 1rem;
+                border-radius: 22px;
+
+                .add-button{
+                    background: $blueBtns;
+                    color: $iconColor;
+                    border: none;
+                    font-size: 20px;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+          }
+        }
+
+        .data-table{
+          margin: 0 auto 2rem;
+          width: 90%;
+
+          table{
+            width: 100%;
+            text-align: center;
+            cursor: default;
+
+            thead, tbody{
+              th {
+                padding: 1rem 0;
+                text-transform: capitalize;
+                font-size: 20px;
+              }
+
+              .evo-content {
+                &:hover {
+                  background: $blueBtns;
+
+                  td:first-child{
+                    border-top-left-radius: 22px;
+                    border-bottom-left-radius: 22px;
+                  }
+                  .actions{
+                    border-top-right-radius: 22px;
+                    border-bottom-right-radius: 22px;
+                  }
+                }
+
+                td {
+                  padding: .5rem;
+                  font-size: 17px;
+                }
+              }
+              .actions{
+                .modifs{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 2rem;
+                  width: 100%;
+                  & i{
+                    cursor: pointer;
+                    padding: .5rem 0;
+                    transition: all .5s;
+
+                    &:hover {
+                      color: $changeBlueMainColor;
+                    }
                   }
                 }
               }
@@ -130,30 +139,45 @@
           }
         }
       }
+    }
+  }
+}
 
 @media screen and (max-width: 800px){
-#evolution{
-  .bubble{
-    .overall{
-      .data-table{
-        overflow-x: scroll;
-        table{
-          th, td{
-            border: 1px solid grey;
-          }
-          .actions{
-            padding: 2rem 0;
+  #evolution{
+    .bubble{
+      .overall{
+        .evolution-head{
+          flex-direction: column-reverse;
+          gap: 2rem;
+        }
+
+        .data-table{
+          overflow-x: scroll;
+          table{
+            th, td{
+              border: 1px solid grey;
+            }
+            .actions{
+              padding: 2rem 0;
+            }
           }
         }
       }
     }
   }
 }
-}
 
-    .pagination{
-        margin-top: 2rem;
-        text-align: center;
-        color: $blueBtns;
+@media screen and (max-width: 400px){
+  .evo-subtitle{
+    h3{
+      text-align: center;
     }
   }
+}
+
+@media screen and (max-width: 500px){
+    .buttons{
+        flex-direction: column;
+    }
+}
