@@ -59,6 +59,7 @@
                 border: none;
                 font-size: 20px;
                 outline: none;
+                cursor: pointer;
               }
             }
           }
@@ -71,6 +72,7 @@
           table{
             width: 100%;
             text-align: center;
+            cursor: default;
 
             thead, tbody{
               th {
@@ -80,8 +82,17 @@
               }
 
               .evo-content {
-                &:hover:not(.actions) {
+                &:hover {
                   background: $blueBtns;
+
+                  td:first-child{
+                    border-top-left-radius: 22px;
+                    border-bottom-left-radius: 22px;
+                  }
+                  .actions{
+                    border-top-right-radius: 22px;
+                    border-bottom-right-radius: 22px;
+                  }
                 }
 
                 td {
@@ -90,22 +101,23 @@
                 }
               }
               .actions{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
+                .modifs{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 2rem;
+                  width: 100%;
+                  & i{
+                    cursor: pointer;
+                    padding: .5rem 0;
+                    transition: all .5s;
 
-                & i{
-                  cursor: pointer;
-                  padding: .5rem 0;
-                  transition: all .5s;
-
-                  &:hover {
-                    color: $blueBtns;
+                    &:hover {
+                      color: $changeBlueMainColor;
+                    }
                   }
                 }
               }
-
             }
           }
         }
