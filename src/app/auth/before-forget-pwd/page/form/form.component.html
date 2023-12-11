@@ -1,0 +1,26 @@
+<div class="bg">
+    <app-icon-form [iconExit]="'fa-solid fa-door-open'" [exitLink]="''" class="exit"></app-icon-form>
+    
+    <div class="form-connexion">
+        <div class="logo">
+            <a [routerLink]="'/'">
+                <img src="assets/img/white_logo.svg" alt="logo">
+            </a>
+        </div> 
+        
+        <h1>Veuillez rentrer votre Email</h1>
+        
+        <form method="post" action="form.component.ts">
+            <div class="input">
+                <label for="password">Email :</label>
+                <div class="icon-container">
+                    <i class="fas fa-user iconUser"></i>
+                </div>
+                <input type="text" name="email" id="email" required placeholder="prince@gmail.com">
+            </div>
+            
+            <input type="submit" value="Envoyer" class="button-connexion">
+        </form>
+    </div>
+    
+</div>
