@@ -13,8 +13,8 @@
                 <option value="inactive">Commerciaux</option>
                 <option value="inactive">DG</option>
               </select>
-
-            <button class="add-button">Ajouter</button>
+              <!--add -->
+            <button class="add-button" [routerLink]="'/dashboard/employes/add'">Ajouter</button> 
         </div>
     </div>
 
@@ -48,7 +48,9 @@
                   <td>livré</td>
                   <td>
                     <div class="icons">
-                      <i class="fa-solid fa-pen"></i>
+                      <!-- edit-->
+                      <i class="fa-solid fa-pen" [routerLink]="'/dashboard/employes/edit'"></i>
+                      <!-- supprimer -->
                       <i class="fa-solid fa-trash"></i>
                     </div>
                   </td>
@@ -60,5 +62,6 @@
     <div class="pagination">
         <p>Future Pagination</p>
     </div>
+    
 </div>
 
