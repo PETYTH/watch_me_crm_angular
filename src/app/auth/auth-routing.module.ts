@@ -23,6 +23,11 @@ const routes: Routes = [
       },
 
       {
+        path: 'before-forget-pwd',
+        loadChildren: () => import('./before-forget-pwd/before-forget-pwd.module').then(m => m.BeforeForgetPwdModule)
+      },
+
+      {
         path: '',
         redirectTo: '',
         pathMatch: 'full'

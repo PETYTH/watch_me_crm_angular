@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: url(/assets/img/bg-connexion.png);
 }
 
 .logo {
@@ -79,18 +80,25 @@
 
     .flex {
       display: flex;
-      align-items: center; 
-
+      align-items: center;
+      margin-left: 40px;
       .espace-icon,
       .espace-texte {
-        width: 50%; 
+        width: 50%;
         text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+
       }
 
       .espace-texte {
         display: flex;
-        justify-content: space-between; 
-        align-items: center;  
+        justify-content: space-between;
+        align-items: center;
+      }
+      .espace-texte  p{
+        margin-left: -2rem;
       }
     }
   }
@@ -111,6 +119,18 @@
 
 .flex p, .infoflex p{
   margin-left: 10px;
+}
+
+.infoflex p{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.espace-texte a{
+  color: white;
+  &:hover{
+    color: $blueBtns;
+  }
 }
 
 .online-status {

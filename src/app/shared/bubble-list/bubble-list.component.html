@@ -1,64 +1,62 @@
-<div class="card-commande">
+<section id="evolution">
+  <div class="bubble huge">
+    <div class="overall">
+      <div class="evolution-head">
+        <div class="evo-head-container">
 
-    <div class="head-commande">
-        <div class="titre">
-            <h2>Titre</h2>
-            <h4>Sous Titre</h4>
+          <div class="evo-title">
+            <h2 class="title">Titre</h2>
+          </div>
+
+          <div class="evo-subtitle">
+            <h3 class="subtitle">Sous-Titre</h3>
+          </div>
         </div>
-        <div class="button">
-          
-              <select id="status" name="filtrer" required class="filter-button">
-                <option value="active">Filtrer</option>
-                <option value="inactive">SAV</option>
-                <option value="inactive">Commerciaux</option>
-                <option value="inactive">DG</option>
-              </select>
 
-            <button class="add-button">Ajouter</button>
+        <div class="buttons">
+          <div class="filter-infos">
+            <select>
+              <option value="defaut">Filtres</option>
+              <option value="opt">Option 1</option>
+              <option value="opt">Option 2</option>
+              <option value="opt">Option 3</option>
+              <option value="opt">Option 4</option>
+              <option value="opt">Option 5</option>
+              <option value="opt">Option 6</option>
+            </select>
+          </div>
+
+          <div class="ajout">
+            <button class="add-button" [routerLink]="'/dashboard/employes/add'">Ajouter</button>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="table-container">
+      <div class="data-table">
         <table>
-            <thead>
-              <div class="titre-info">
-                <tr>
-                  <th>Numéro de commande</th>
-                  <th>Date</th>
-                  <th>Paiement</th>
-                  <th>Adresse</th>
-                  <th>Code postal</th>
-                  <th>Ville</th>
-                  <th>ID du client</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </div>
-            </thead>
-            <tbody>
-              <div class="infos">
-                <tr>
-                  <td>12</td>
-                  <td>15/02/23</td>
-                  <td>CB</td>
-                  <td>3 Rue Pierre Corneille</td>
-                  <td>76000</td>
-                  <td>Rouen</td>
-                  <td>1546841</td>
-                  <td>livré</td>
-                  <td>
-                    <div class="icons">
-                      <i class="fa-solid fa-pen"></i>
-                      <i class="fa-solid fa-trash"></i>
-                    </div>
-                  </td>
-                </tr>
-              </div>
-        </table> 
-    </div> 
-    
-    <div class="pagination">
-        <p>Future Pagination</p>
-    </div>
-</div>
+          <thead>
+          <tr>
+            <th *ngFor="let header of tableHeaders">{{ header }}</th>
+            <th colspan="2">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let row of tableRows" class="evo-content">
+            <td *ngFor="let cell of row">
+              {{ cell }}
+            </td>
 
+            <td class="actions">
+              <div class="modifs">
+                <i class="{{modifIcon}}" [routerLink]="'/dashboard/employes/edit'"></i>
+                <i class="{{deleteIcon}}"></i>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
