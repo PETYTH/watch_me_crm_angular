@@ -16,6 +16,9 @@ import { BubbleListComponent } from './bubble-list/bubble-list.component';
 import { BubbleAddEmployesComponent } from './bubble-add-employes/bubble-add-employes.component';
 import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-employes.component';
 import { BubbleAllInfosComponent } from './bubble-all-infos/bubble-all-infos.component';
+import { BubbleAddClientComponent } from './bubble-add-client/bubble-add-client.component';
+import { BubbleEditClientComponent } from './bubble-edit-client/bubble-edit-client.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -37,6 +40,8 @@ import { BubbleAllInfosComponent } from './bubble-all-infos/bubble-all-infos.com
     BubbleAddEmployesComponent,
     BubbleEditEmployesComponent,
     BubbleAllInfosComponent,
+    BubbleAddClientComponent,
+    BubbleEditClientComponent,
   ],
     exports: [
         SidebarComponent,
@@ -56,7 +61,8 @@ import { BubbleAllInfosComponent } from './bubble-all-infos/bubble-all-infos.com
     CommonModule,
     RouterLink,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
 })

@@ -55,8 +55,17 @@
           </tr>
           </tbody>
         </table>
-      </div>
 
+        <div class="paginate">
+          <ul class="pagination" *ngFor="
+          let data of dataset | paginate: { itemsPerPage: 2, currentPage: pages }
+          ">
+          <!-- {{ data }} -->
+          </ul>
+          <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+        </div>
+        
+      </div>
     </div>
   </div>
 </section>

@@ -52,6 +52,9 @@
               background: $blueBtns;
               padding: 0 1rem;
               border-radius: 22px;
+              &:hover{
+                background: $orangeBtnHover;
+              }
 
               select{
                 background: $blueBtns;
@@ -60,6 +63,10 @@
                 font-size: 20px;
                 outline: none;
                 cursor: pointer;
+                &:hover{
+                  background: $orangeBtnHover;
+                }
+              
               }
             }
 
@@ -69,6 +76,9 @@
                 background: $blueBtns;
                 padding: 0 1rem;
                 border-radius: 22px;
+                &:hover{
+                  background: $orangeBtnHover;
+                }
 
                 .add-button{
                     background: $blueBtns;
@@ -77,6 +87,9 @@
                     font-size: 20px;
                     outline: none;
                     cursor: pointer;
+                    &:hover{
+                      background: $orangeBtnHover;
+                    }
                 }
             }
           }
@@ -85,6 +98,11 @@
         .data-table{
           margin: 0 auto 2rem;
           width: 90%;
+          
+          .paginate{
+            padding-top: 15px;
+            text-align: center;
+          }
 
           table{
             width: 100%;
