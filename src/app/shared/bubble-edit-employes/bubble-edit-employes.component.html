@@ -4,24 +4,24 @@
         <div class="name">
             <div class="input-group">
               <i class="fas fa-user iconUser"></i>
-              <input type="text" id="nom" name="nom" required placeholder="Justine">
+              <input type="text" id="nom" name="nom" required placeholder="{{valueFirstName}}">
             </div>
-      
+
             <div class="input-group">
               <i class="fas fa-user iconUser"></i>
-              <input type="text" id="prenom" name="prenom" required placeholder="Labas">
+              <input type="text" id="prenom" name="prenom" required placeholder="{{valueLastName}}">
             </div>
         </div>
 
         <div class="info">
             <div class="input-group">
               <i class="fa-regular fa-envelope"></i>
-              <input type="email" id="email" name="email" required placeholder="justinelabas95@gmail.com">
+              <input type="email" id="email" name="email" required placeholder="{{valueMail}}">
             </div>
-      
+
             <div class="input-group">
               <i class="fa-regular fa-calendar-days"></i>
-              <input type="text" id="dob" name="dob" required placeholder="12/02/1995">
+              <input type="text" id="dob" name="dob" required placeholder="{{valueBirthday}}">
               <!-- Champ caché pour stocker la valeur de la date -->
               <input type="date" id="dob-hidden" name="dob" required style="display: none;">
             </div>
@@ -39,6 +39,4 @@
 
         <button type="submit" class="submit-button">Valider</button>
     </form>
-
-    <p>Après validation, l'employé recevra un mail pour modifier son mot de passe.</p>
   </div>

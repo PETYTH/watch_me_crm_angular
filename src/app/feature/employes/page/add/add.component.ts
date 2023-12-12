@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./add.component.scss']
 })
 export class AddComponent{
-
+  employeMessage : string = 'Après validation, l\'employé recevra un mail pour modifier son mot de passe.'
 }

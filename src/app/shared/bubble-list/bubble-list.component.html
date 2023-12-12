@@ -42,7 +42,7 @@
           </thead>
           <tbody>
           <tr *ngFor="let row of tableRows" class="evo-content">
-            <td *ngFor="let cell of row">
+            <td *ngFor="let cell of row" [routerLink]="viewLink">
               {{ cell }}
             </td>
 

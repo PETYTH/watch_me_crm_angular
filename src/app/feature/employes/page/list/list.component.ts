@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   employeLink : string = '/dashboard/employes/add';
+  employeView : string = '/dashboard/employes/view';
 }

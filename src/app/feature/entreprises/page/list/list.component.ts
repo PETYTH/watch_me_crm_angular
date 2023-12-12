@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   entrepriseLink : string = '/dashboard/entreprises/add';
+  entrepriseView : string = '/dashboard/entreprises/view';
 }

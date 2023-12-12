@@ -8,6 +8,7 @@ import {Component, Input} from '@angular/core';
 })
 export class BubbleListComponent {
   @Input() addLink : string = '';
+  @Input() viewLink : string = '';
 
   modifIcon : string = "fa-solid fa-pen";
   deleteIcon : string = "fa-solid fa-trash";

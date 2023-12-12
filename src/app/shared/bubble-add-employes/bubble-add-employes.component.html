@@ -6,7 +6,7 @@
               <i class="fas fa-user iconUser"></i>
               <input type="text" id="nom" name="nom" required placeholder="Nom">
             </div>
-      
+
             <div class="input-group">
               <i class="fas fa-user iconUser"></i>
               <input type="text" id="prenom" name="prenom" required placeholder="Prénom">
@@ -18,7 +18,7 @@
               <i class="fa-regular fa-envelope"></i>
               <input type="email" id="email" name="email" required placeholder="emailduboss@gmail.com">
             </div>
-      
+
             <div class="input-group">
               <i class="fa-regular fa-calendar-days"></i>
               <input type="text" id="dob" name="dob" required placeholder="jj/mm/aaaa">
@@ -40,5 +40,5 @@
         <button type="submit" class="submit-button">Valider</button>
     </form>
 
-    <p>Après validation, l'employé recevra un mail pour modifier son mot de passe.</p>
+    <p>{{afterValidationMessage}}</p>
   </div>
