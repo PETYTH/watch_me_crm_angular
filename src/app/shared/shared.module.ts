@@ -18,6 +18,7 @@ import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-
 import { BubbleAllInfosComponent } from './bubble-all-infos/bubble-all-infos.component';
 
 
+
 @NgModule({
   declarations: [
     SidebarComponent,
