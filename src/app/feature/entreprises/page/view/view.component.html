@@ -1,0 +1,41 @@
+<section id="entreprise-view">
+  <div class="dash-wrap">
+    <div class="employe-infos">
+      <app-bubble-all-infos>
+        <div class="main-infos-content">
+          <h2>{{ getEntreprise }}</h2>
+        </div>
+
+        <div class="infos1-content">
+          <h3>{{userAdresse1}}</h3>
+        </div>
+
+        <div class="infos2-content">
+          <span>{{userAdresse2}}</span>
+        </div>
+
+        <div class="infos3-content">
+          <span>{{userCA}}</span>
+        </div>
+
+        <div class="infos4-content">
+          <span>{{userSiret}}</span>
+        </div>
+      </app-bubble-all-infos>
+    </div>
+
+    <div class="dash-multiple-infos">
+      <div class="dash-chart">
+        <app-bubble-charts></app-bubble-charts>
+      </div>
+
+      <div class="dash-infos-utiles">
+        <app-bubble-infos-utile></app-bubble-infos-utile>
+      </div>
+    </div>
+
+    <div class="dash-evolution">
+      <app-bubble-evolution-stats></app-bubble-evolution-stats>
+    </div>
+  </div>
+</section>

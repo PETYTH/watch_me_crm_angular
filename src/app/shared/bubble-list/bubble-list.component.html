@@ -27,7 +27,7 @@
           </div>
 
           <div class="ajout">
-            <button class="add-button" [routerLink]="'/dashboard/employes/add'">Ajouter</button>
+            <button class="add-button" [routerLink]="addLink">Ajouter</button>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
           </thead>
           <tbody>
           <tr *ngFor="let row of tableRows" class="evo-content">
-            <td *ngFor="let cell of row">
+            <td *ngFor="let cell of row" [routerLink]="viewLink">
               {{ cell }}
             </td>
 

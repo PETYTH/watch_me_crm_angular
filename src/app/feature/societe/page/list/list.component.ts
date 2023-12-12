@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-
+  societeLink : string = '/dashboard/societe/add';
+  societeView : string = '/dashboard/societe/view';
 }

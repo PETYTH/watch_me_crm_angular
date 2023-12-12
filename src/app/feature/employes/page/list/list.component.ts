@@ -3,8 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  styleUrls: ['./list.component.scss'],
+
 })
 export class ListComponent {
-
+  employeLink : string = '/dashboard/employes/add';
+  employeView : string = '/dashboard/employes/view';
 }

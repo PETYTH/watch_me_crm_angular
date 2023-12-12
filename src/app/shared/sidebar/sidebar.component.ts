@@ -20,11 +20,6 @@ export class SidebarComponent{
       private authService: AuthService,
   ) {}
 
-
-
-
-
-
   @Input() isSidebarOpen : boolean = false;
 
   lockEvent(){
