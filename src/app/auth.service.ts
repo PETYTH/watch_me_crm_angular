@@ -41,6 +41,20 @@ export class AuthService {
     sessionStorage.setItem(this.USER_INFO_KEY, JSON.stringify(this.userInfo));
     sessionStorage.setItem(this.TOKEN_EXPIRY_KEY, tokenExpiry.toISOString()); // Stocker la date d'expiration du token
     this.isAuthenticatedValue = true;
+
+    // Déconnexion automatique si le token est expiré
+    const expiryDate = new Date(tokenExpiry);
+    const currentDate = new Date();
+
+    if (expiryDate < currentDate) {
+      this.logout();
+    } else {
+      // Mettre en place un timer pour déclencher la déconnexion lorsque le token expire
+      const timeUntilExpiry = expiryDate.getTime() - currentDate.getTime();
+      setTimeout(() => {
+        this.logout();
+      }, timeUntilExpiry);
+    }
   }
 
   getUserName(): string {
