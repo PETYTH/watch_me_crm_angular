@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-bubble-list',
   templateUrl: './bubble-list.component.html',
-  styleUrls: ['./bubble-list.component.scss']
+  styleUrls: ['./bubble-list.component.scss'],
+
 })
 export class BubbleListComponent {
+  @Input() addLink : string = '';
+
   modifIcon : string = "fa-solid fa-pen";
   deleteIcon : string = "fa-solid fa-trash";
 

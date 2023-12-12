@@ -6,12 +6,16 @@ import { CommonModule } from "@angular/common";
 import {ListComponent} from "./page/list/list.component";
 import { ViewComponent } from './page/view/view.component';
 import {SharedModule} from "../../shared/shared.module";
+import { EditComponent } from './page/edit/edit.component';
+import { AddComponent } from './page/add/add.component';
 
 
 @NgModule({
   declarations: [
   ListComponent,
-  ViewComponent
+  ViewComponent,
+  EditComponent,
+  AddComponent
   ],
     imports: [
         EntreprisesRoutingModule,

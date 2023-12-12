@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class ListComponent {
-
+  commandeLink = '/dashboard/commandes/add';
 }
