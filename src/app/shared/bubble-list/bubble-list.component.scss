@@ -85,6 +85,27 @@
         .data-table{
           margin: 0 auto 2rem;
           width: 90%;
+          
+          .paginate{
+            padding-top: 15px;
+
+             .pagination{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+               li{
+                a{
+                  color: $blueBtns;
+                  
+                  &:hover{
+                    color: $iconColor;
+                  }
+                }
+               }
+             }
+          }
 
           table{
             width: 100%;
