@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../auth.service";
 
 @Component({
   selector: 'app-header-boards',
@@ -7,9 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderBoardsComponent {
   today: Date = new Date();
-  role : string = "Rôle";
+  enveloppe: string = "fa-regular fa-envelope";
+  bell: string = "fa-regular fa-bell";
+  palette: string = "fa-solid fa-palette";
 
-  enveloppe : string = "fa-regular fa-envelope";
-  bell : string = "fa-regular fa-bell";
-  palette : string = "fa-solid fa-palette";
+  constructor(private authService: AuthService) {}
+
+  getUserRole(): string {
+    return this.authService.getUserRole();
+  }
 }

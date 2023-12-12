@@ -14,6 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background: url("../../../assets/img/bg-connexion.png") center/cover no-repeat;
 
       .overall{
         display: flex;
@@ -24,15 +25,15 @@
         .title-container{
           width: 55%;
           text-align: center;
-          padding: .5rem;
-          font-size: 25px;
+          padding: 1rem;
+          font-size: 20px;
         }
         .number-container{
           width: 35%;
           text-align: center;
-          padding: .5rem;
+          padding: 1rem;
           font-weight: bold;
-          font-size: 35px;
+          font-size: 25px;
         }
       }
     }
