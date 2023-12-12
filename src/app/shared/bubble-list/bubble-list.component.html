@@ -57,18 +57,15 @@
         </table>
 
         <div class="paginate">
-          <ul class="pagination">
-            <li><a href="">&laquo; Previous</a></li>
-            <li><a href="">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
-            <li><a href="">Next &raquo;</a></li>
+          <ul class="pagination" *ngFor="
+          let data of dataset | paginate: { itemsPerPage: 2, currentPage: pages }
+          ">
+          <!-- {{ data }} -->
           </ul>
+          <pagination-controls (pageChange)="pages = $event"></pagination-controls>
         </div>
-
+        
       </div>
-
     </div>
   </div>
 </section>

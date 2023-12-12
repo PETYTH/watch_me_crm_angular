@@ -101,21 +101,7 @@
           
           .paginate{
             padding-top: 15px;
-             .pagination{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-               li{
-                a{
-                  color: $blueBtns;
-                  
-                  &:hover{
-                    color: $iconColor;
-                  }
-                }
-               }
-             }
+            text-align: center;
           }
 
           table{

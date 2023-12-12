@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./bubble-list.component.scss']
 })
 export class BubbleListComponent {
+  pages: number = 1;
+  dataset: any[] = ['1','2','3','4'];
+
   modifIcon : string = "fa-solid fa-pen";
   deleteIcon : string = "fa-solid fa-trash";
 

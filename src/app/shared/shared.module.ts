@@ -18,6 +18,7 @@ import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-
 import { BubbleAllInfosComponent } from './bubble-all-infos/bubble-all-infos.component';
 import { BubbleAddClientComponent } from './bubble-add-client/bubble-add-client.component';
 import { BubbleEditClientComponent } from './bubble-edit-client/bubble-edit-client.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -60,7 +61,8 @@ import { BubbleEditClientComponent } from './bubble-edit-client/bubble-edit-clie
     CommonModule,
     RouterLink,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
 })
