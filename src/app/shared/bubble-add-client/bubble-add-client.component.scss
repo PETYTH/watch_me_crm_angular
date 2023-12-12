@@ -1,0 +1,114 @@
+@import "../../../styles";
+
+
+.container {
+    background-color: $mainColor;
+    color: $iconColor;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: rgba($boxShadow, 0.17) 0px -23px 25px 0px inset, rgba($boxShadow, 0.15) 0px -36px 30px 0px inset, rgba($boxShadow, 0.1) 0px -79px 40px 0px inset, rgba($boxShadow, 0.06) 0px 2px 1px, rgba($boxShadow, 0.09) 0px 4px 2px, rgba($boxShadow, 0.09) 0px 8px 4px, rgba($boxShadow, 0.09) 0px 16px 8px, rgba($boxShadow, 0.09) 0px 32px 16px;
+
+    @media (max-width: 930px){
+      margin: 10px;
+    }
+
+    form {
+      margin-top: 0;
+
+      .name{
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+
+        @media (max-width: 700px){
+          display: block;
+        }
+      }
+
+      .info{
+        display: flex;
+        gap: 15px;
+
+        @media (max-width: 700px){
+          display: block;
+        }
+      }
+
+      .input-group {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        i {
+          position: absolute;
+          padding: 10px;
+        }
+
+        ::placeholder{
+            color: $iconColor;
+            font-style: italic;
+        }
+
+        input,
+        select {
+          width: 100%;
+          background-color: $violetDashboardInput;
+          color: $iconColor;
+          border: none;
+          border-radius: 1rem;
+          padding: 10px 2rem;
+          min-width: 250px;
+          box-shadow: 4px 4px 4px 0 #00000032;
+          outline: none;
+
+          @media (max-width: 700px){
+            min-width: 10px;
+          }
+        }
+        select:hover{
+          cursor: pointer;
+        }
+      }
+
+      .submit-button {
+        background-color: $blueBtns;
+        color: $iconColor;
+        padding: 9px 90px;
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+        font-size: 15px;
+        box-shadow: 4px 4px 4px 0px #00000032;
+
+        @media (max-width: 700px){
+          padding: 9px 30px;
+        }
+
+        &:hover {
+          background-color: $orangeBtnHover;
+        }
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-align: center;
+
+       @media (max-width: 700px){
+          font-size: 10px;
+        }
+
+      &:hover{
+        text-decoration: underline;
+        cursor: default;
+      }
+    }
+}
