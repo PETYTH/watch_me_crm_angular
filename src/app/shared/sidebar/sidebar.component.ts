@@ -21,6 +21,10 @@ export class SidebarComponent{
   ) {}
 
 
+
+
+
+
   @Input() isSidebarOpen : boolean = false;
 
   lockEvent(){
@@ -41,6 +45,8 @@ export class SidebarComponent{
   logEvent(){
     this.isUserOnline = !this.isUserOnline;
   }
+
+
 
 
   getUserName(): string {

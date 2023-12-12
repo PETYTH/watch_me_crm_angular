@@ -17,6 +17,7 @@ import { BubbleAddEmployesComponent } from './bubble-add-employes/bubble-add-emp
 import { BubbleEditEmployesComponent } from './bubble-edit-employes/bubble-edit-employes.component';
 
 
+
 @NgModule({
   declarations: [
     SidebarComponent,

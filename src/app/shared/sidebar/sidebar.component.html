@@ -20,7 +20,9 @@
             <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/list'"></app-button-link-sidebar>
           </div>
           <div class="espace-texte">
-            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Employés <i class="fa-solid fa-chevron-down"></i></p>
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">
+              <a [routerLink]="'/dashboard/employes/list'">Employés</a>
+            </p>
           </div>
         </div>
 
@@ -29,7 +31,9 @@
             <app-button-link-sidebar [icon]="'fa-solid fa-building'" [link]="'/dashboard/entreprises/list'"></app-button-link-sidebar>
           </div>
           <div class="espace-texte">
-            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">entreprises<i class="fa-solid fa-chevron-down"></i></p>
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">
+              <a [routerLink]="'/dashboard/entreprise/list'">Entreprise</a>
+            </p>
           </div>
         </div>
 
@@ -38,7 +42,9 @@
             <app-button-link-sidebar [icon]="'fa-solid fa-user'" [link]="'/dashboard/clients/list'"></app-button-link-sidebar>
           </div>
           <div class="espace-texte">
-            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Clients<i class="fa-solid fa-chevron-down"></i></p>
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">
+              <a [routerLink]="'/dashboard/clients/list'">Clients</a>
+            </p>
           </div>
         </div>
 
@@ -47,7 +53,9 @@
             <app-button-link-sidebar [icon]="'fa-solid fa-cart-shopping'" [link]="'/dashboard/commandes/list'"></app-button-link-sidebar>
           </div>
           <div class="espace-texte">
-            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Commandes<i class="fa-solid fa-chevron-down"></i></p>
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">
+              <a [routerLink]="'/dashboard/commandes/list'">Commandes</a>
+            </p>
           </div>
         </div>
 
@@ -56,12 +64,14 @@
             <app-button-link-sidebar [icon]="'fa-solid fa-city'" [link]="'/dashboard/societe/list'"></app-button-link-sidebar>
           </div>
           <div class="espace-texte">
-            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">Sociétés<i class="fa-solid fa-chevron-down"></i></p>
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">
+              <a [routerLink]="'/dashboard/societe/list'">Société</a>
+            </p>
           </div>
         </div>
-        
       </div>
     </div>
+
 
     <div class="ligne"></div>
 
