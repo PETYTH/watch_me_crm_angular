@@ -9,6 +9,7 @@ import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import {PageComponent} from "./home/copyright/page/page.component";
 import { NgxPaginationModule } from 'ngx-pagination';
 
 
@@ -16,6 +17,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
   declarations: [
     AppComponent,
     HomeComponent,
+    PageComponent,
   ],
   imports: [
     BrowserModule,

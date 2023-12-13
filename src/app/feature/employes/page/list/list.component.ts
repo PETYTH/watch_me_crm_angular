@@ -10,6 +10,7 @@ import {ApiService} from "../../../../auth/api/api.service";
 export class ListComponent implements OnInit {
   employeLink : string = '/dashboard/employes/add';
   employeView : string = '/dashboard/employes/view';
+  employeEdit : string = '/dashboard/employes/edit';
   dataEmployes: { [key: string]: string[] } = {
     "Status" : []
   }
@@ -31,4 +32,5 @@ export class ListComponent implements OnInit {
       }
     )
   }
+
 }

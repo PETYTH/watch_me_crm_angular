@@ -13,6 +13,8 @@ export class BubbleListComponent {
 
   @Input() addLink : string = '';
   @Input() viewLink : string = '';
+  @Input() editLink : string = '';
+  @Input() id : number = 0;
   @Input() tableData : { [key: string]: string[] } = {};
 
   modifIcon : string = "fa-solid fa-pen";
