@@ -9,11 +9,9 @@ import { registerLocaleData } from '@angular/common';
 import * as fr from '@angular/common/locales/fr';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import {PageComponent} from "./home/copyright/page/page.component";
-=======
 import { NgxPaginationModule } from 'ngx-pagination';
->>>>>>> 6d6a822526348e96c3d9d8120a48c0fa167b1e5b
+
 
 
 @NgModule({
