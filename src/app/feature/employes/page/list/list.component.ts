@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ApiService} from "../../../../auth/api/api.service";
 
 @Component({
   selector: 'app-list',
@@ -6,14 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./list.component.scss'],
 
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
   employeLink : string = '/dashboard/employes/add';
   employeView : string = '/dashboard/employes/view';
   employeEdit : string = '/dashboard/employes/edit';
-
   dataEmployes: { [key: string]: string[] } = {
-    "row1": ["data 1", "data 2", "data 3", "data 4", "data 5"],
-    "row2": ["data 6", "data 7", "data 8"],
-    "row3": ["data 9", "data 10", "data 11", "data 12"],
+    "Status" : []
   }
+
+  constructor(private apiService: ApiService) {}
+
+  ngOnInit() {
+    this.getAllEmployes();
+  }
+
+  getAllEmployes() {
+    this.apiService.getAllEmployes().subscribe(
+      (result: any[]) => {
+        console.log(result)
+        this.dataEmployes["Status"] = result.map(employe => employe._status);
+      },
+      (error) => {
+        console.error('Une erreur est survenue');
+      }
+    )
+  }
+
 }

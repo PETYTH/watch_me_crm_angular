@@ -13,7 +13,6 @@ import {PageComponent} from "./home/copyright/page/page.component";
 import { NgxPaginationModule } from 'ngx-pagination';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
