@@ -1,26 +1,32 @@
 <div class="bg">
-    <app-icon-form [iconExit]="'fa-solid fa-door-open'" [exitLink]="''" class="exit"></app-icon-form>
-    
-    <div class="form-connexion">
-        <div class="logo">
-            <a [routerLink]="'/'">
-                <img src="assets/img/white_logo.svg" alt="logo">
-            </a>
-        </div> 
-        
-        <h1>Veuillez rentrer votre Email</h1>
-        
-        <form method="post" action="form.component.ts">
-            <div class="input">
-                <label for="password">Email :</label>
-                <div class="icon-container">
-                    <i class="fas fa-user iconUser"></i>
-                </div>
-                <input type="text" name="email" id="email" required placeholder="prince@gmail.com">
-            </div>
-            
-            <input type="submit" value="Envoyer" class="button-connexion">
-        </form>
+  <app-icon-form [iconExit]="'fa-solid fa-door-open'" [exitLink]="''" class="exit"></app-icon-form>
+
+  <div class="form-connexion">
+    <div class="logo">
+      <a [routerLink]="'/'">
+        <img src="assets/img/white_logo.svg" alt="logo">
+      </a>
     </div>
-    
+
+    <ng-container *ngIf="!emailSent; else emailSentMessage">
+      <h1>Veuillez rentrer votre Email</h1>
+      <p style="color: #FB6316FF; font-weight: bold; ">Pour recevoir un email de réinitialisation de mot de passe</p>
+      <form [formGroup]="credentialsForm" (ngSubmit)="forgotPassword($event)">
+        <div class="input">
+          <div class="icon-container">
+            <i class="fas fa-user iconUser"></i>
+          </div>
+          <input type="text" formControlName="email" required placeholder="prince@gmail.com">
+        </div>
+        <span class="error" *ngIf="forgotPasswordError">{{ forgotPasswordError }}</span>
+        <input type="submit" value="Envoyer" class="button-connexion">
+      </form>
+    </ng-container>
+
+    <ng-template #emailSentMessage>
+      <h1>Un email vous a été envoyé</h1>
+      <p class="reponse">Allez vérifier votre boite email afin de réinitialiser votre mot de passe !</p><br>
+      <p style="font-weight: bold; text-align: center">De la part de l'équipe Watch Me</p>
+    </ng-template>
+  </div>
 </div>
