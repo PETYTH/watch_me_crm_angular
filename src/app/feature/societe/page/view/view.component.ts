@@ -16,12 +16,12 @@ export class ViewComponent {
     private authService: AuthService,
   ) {}
 
-  userBirthday : string = '16/08/1996';
-  userEmail : string = 'nehligchris@live.fr';
-  userRole : string = 'Rôle';
+  CompanyName : string = 'NFS';
+  FirstPartAdress : string = '16 rue du Général Sarrail';
+  SecondPartAdress : string = '76000 Rouen';
+  Siret : string = '123-456-789-00011';
 
-  userPhoto : string = '../assets/img/user.png';
-  altTexte : string = 'image de l\'utilisateur';
+  userCA : string = '1000€';
 
   getUserName(): string {
     return this.authService.getUserName();

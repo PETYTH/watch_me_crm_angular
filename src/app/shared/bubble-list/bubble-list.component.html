@@ -42,13 +42,13 @@
           </thead>
           <tbody>
           <tr *ngFor="let row of tableRows" class="evo-content">
-            <td *ngFor="let cell of row" [routerLink]="viewLink">
+            <td *ngFor="let cell of row" [routerLink]="viewLink + '/' + id">
               {{ cell }}
             </td>
 
             <td class="actions">
               <div class="modifs">
-                <i class="{{modifIcon}}" [routerLink]="editLink"></i>
+                <i class="{{modifIcon}}" [routerLink]="editLink + '/' + id"></i>
                 <i class="{{deleteIcon}}"></i>
               </div>
             </td>
