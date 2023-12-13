@@ -1,0 +1,47 @@
+
+<div class="container">
+    <form>
+        <div class="name">
+            <div class="input-group">
+              <i class="fas fa-user iconUser"></i>
+              <input type="text" id="nom" name="nom" required placeholder="Nom">
+            </div>
+      
+            <div class="input-group">
+              <i class="fas fa-user iconUser"></i>
+              <input type="text" id="prenom" name="prenom" required placeholder="Prénom">
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="input-group">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="email" name="email" required placeholder="emailduclient@gmail.com">
+            </div>
+      
+            <div class="input-group">
+              <i class="fa-regular fa-calendar-days"></i>
+              <input type="text" id="dob" name="dob" required placeholder="jj/mm/aaaa">
+              <!-- Champ caché pour stocker la valeur de la date -->
+              <input type="date" id="dob-hidden" name="dob" required style="display: none;">
+            </div>
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-address-card"></i>
+            <select id="status" name="status" required>
+              <option value="active">Status</option>
+              <option value="inactive">Suspect</option>
+              <option value="inactive">Leads</option>
+              <option value="inactive">Prospect</option>
+              <option value="inactive">Acheteur</option>
+              <option value="inactive">Client</option>
+              <option value="inactive">Ambassadeur</option>
+            </select>
+        </div>
+
+        <button type="submit" class="submit-button">Valider</button>
+    </form>
+    
+  </div>
+

@@ -1,0 +1,13 @@
+#entreprise-list{
+  min-height: 80vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dash-wrap{
+    max-width: 1212px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

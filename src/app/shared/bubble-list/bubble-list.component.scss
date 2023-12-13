@@ -32,12 +32,12 @@
 
             .evo-title{
               font-family: $fontTitre;
-              font-size: $sizeTitre;
+              font-size: 20px;
             }
 
             .evo-subtitle{
               font-family: $fontSousTitre;
-              font-size: $sizeSousTitre;
+              font-size: 16px;
             }
           }
 
@@ -52,6 +52,9 @@
               background: $blueBtns;
               padding: 0 1rem;
               border-radius: 22px;
+              &:hover{
+                background: $orangeBtnHover;
+              }
 
               select{
                 background: $blueBtns;
@@ -60,6 +63,14 @@
                 font-size: 20px;
                 outline: none;
                 cursor: pointer;
+                &:hover{
+                  background: $orangeBtnHover;
+                }
+              
+              }
+
+              &:hover, &:hover select{
+                background: $orangeBtnHover;
               }
             }
 
@@ -69,6 +80,9 @@
                 background: $blueBtns;
                 padding: 0 1rem;
                 border-radius: 22px;
+                &:hover{
+                  background: $orangeBtnHover;
+                }
 
                 .add-button{
                     background: $blueBtns;
@@ -77,7 +91,14 @@
                     font-size: 20px;
                     outline: none;
                     cursor: pointer;
+                    &:hover{
+                      background: $orangeBtnHover;
+                    }
                 }
+
+              &:hover, &:hover .add-button{
+                background: $orangeBtnHover;
+              }
             }
           }
         }
@@ -85,6 +106,11 @@
         .data-table{
           margin: 0 auto 2rem;
           width: 90%;
+          
+          .paginate{
+            padding-top: 15px;
+            text-align: center;
+          }
 
           table{
             width: 100%;
@@ -101,6 +127,7 @@
               .evo-content {
                 &:hover {
                   background: $blueBtns;
+                  cursor: pointer;
 
                   td:first-child{
                     border-top-left-radius: 22px;

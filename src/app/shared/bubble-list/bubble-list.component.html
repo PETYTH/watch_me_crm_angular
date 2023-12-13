@@ -27,7 +27,7 @@
           </div>
 
           <div class="ajout">
-            <button class="add-button" [routerLink]="'/dashboard/employes/add'">Ajouter</button>
+            <button class="add-button" [routerLink]="addLink">Ajouter</button>
           </div>
         </div>
       </div>
@@ -42,21 +42,30 @@
           </thead>
           <tbody>
           <tr *ngFor="let row of tableRows" class="evo-content">
-            <td *ngFor="let cell of row">
+            <td *ngFor="let cell of row" [routerLink]="viewLink">
               {{ cell }}
             </td>
 
             <td class="actions">
               <div class="modifs">
-                <i class="{{modifIcon}}" [routerLink]="'/dashboard/employes/edit'"></i>
+                <i class="{{modifIcon}}" [routerLink]="editLink"></i>
                 <i class="{{deleteIcon}}"></i>
               </div>
             </td>
           </tr>
           </tbody>
         </table>
-      </div>
 
+        <div class="paginate">
+          <ul class="pagination" *ngFor="
+          let data of dataset | paginate: { itemsPerPage: 2, currentPage: pages }
+          ">
+          <!-- {{ data }} -->
+          </ul>
+          <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>

@@ -9,6 +9,7 @@ import {HttpHeaders} from "@angular/common/http";
 })
 export class ApiService {
   private apiUrl = 'http://127.0.0.1:8000/api';
+  private apiBase  = 'http://127.0.0.1:8000/forgot'
 
   constructor(private http: HttpClient) {}
 
@@ -22,5 +23,26 @@ export class ApiService {
   logoutUser(headers: HttpHeaders): Observable<any> {
     return this.http.post(`${this.apiUrl}/logout`, {}, { headers });
   }
+
+  getUser(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}/show`);
+  }
+
+  editUser(id: number, userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${id}/user_edit`, userData);
+  }
+
+  forgotPassword(userData: any): Observable<any> {
+    return this.http.post(`${this.apiBase}/forgot-password`, userData);
+  }
+
+  resetPassword(userData: any): Observable<any> {
+    return this.http.post(`${this.apiBase}/reset-password`, userData);
+  }
+
+  deleteUser(id: number, userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${id}/user_delete`, userData);
+  }
+
   // Ajoutez d'autres méthodes d'API selon les besoins
 }

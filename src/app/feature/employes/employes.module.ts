@@ -17,6 +17,9 @@ import { EditComponent } from './page/edit/edit.component';
     AddComponent,
     EditComponent,
   ],
+  exports: [
+    EditComponent
+  ],
   imports: [
     EmployesRoutingModule,
     RouterModule,

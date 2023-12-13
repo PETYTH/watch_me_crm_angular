@@ -11,7 +11,10 @@ section{
   height: 100dvh;
   width: 126px;
   z-index: 2;
-  background: $mainColor;
+  //background: $mainColor;
+  background-image: url('/assets/img/bg-connexion.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   transition: all 0.5s;
 }
 

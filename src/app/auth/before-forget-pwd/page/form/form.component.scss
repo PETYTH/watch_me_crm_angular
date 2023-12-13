@@ -1,3 +1,4 @@
+
 .bg {
     background-image: url('/assets/img/bg-connexion.png');
     background-size: cover;
@@ -42,6 +43,12 @@ h1{
     padding-right: 20px;
 }
 
+p{
+    text-align: center;
+    padding: 15px;
+    color: #FB6316;
+}
+
 h3{
     padding-top: 5px;
     text-align: center;
@@ -77,6 +84,11 @@ label{
     left: 0;
     padding: 10px;
     color: #111111;
+}
+
+.reponse{
+  color : #FB6316FF ;
+  font-weight: bold;
 }
 
 .input input{

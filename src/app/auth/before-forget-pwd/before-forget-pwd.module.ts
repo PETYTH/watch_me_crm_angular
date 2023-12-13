@@ -5,6 +5,7 @@ import { CommonModule } from "@angular/common";
 import { FormComponent } from './page/form/form.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { BeforeForgetPwdRoutingModule } from './before-forget-pwd-routing.module';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BeforeForgetPwdRoutingModule } from './before-forget-pwd-routing.module
     CommonModule,
     SharedModule,
     BeforeForgetPwdRoutingModule,
+    ReactiveFormsModule,
   ]
 })
 

@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-bubble-list',
   templateUrl: './bubble-list.component.html',
-  styleUrls: ['./bubble-list.component.scss']
+  styleUrls: ['./bubble-list.component.scss'],
+
 })
 export class BubbleListComponent {
+
+  pages: number = 1;
+  dataset: any[] = ['1','2','3','4'];
+
+  @Input() addLink : string = '';
+  @Input() viewLink : string = '';
+  @Input() editLink : string = '';
+  @Input() tableData : { [key: string]: string[] } = {};
+
   modifIcon : string = "fa-solid fa-pen";
   deleteIcon : string = "fa-solid fa-trash";
-
-  tableData: { [key: string]: string[] } = {
-    "row1": ["data 1", "data 2", "data 3", "data 4", "data 5"],
-    "row2": ["data 6", "data 7", "data 8"],
-    "row3": ["data 9", "data 10", "data 11", "data 12"],
-  }
 
   get tableHeaders(): string[] {
     return Object.keys(this.tableData);
