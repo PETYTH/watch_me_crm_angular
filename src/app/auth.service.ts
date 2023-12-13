@@ -31,6 +31,10 @@ export class AuthService {
     }
   }
 
+  getToken(): string | null {
+    return sessionStorage.getItem(this.TOKEN_KEY);
+  }
+
   isAuthenticated(): boolean {
     return sessionStorage.getItem(this.TOKEN_KEY) !== null;
   }
