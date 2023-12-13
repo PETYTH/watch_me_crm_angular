@@ -1,0 +1,27 @@
+.wrap2 {
+  width:100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mention_legale  {
+  background-size: cover;
+  color: #051934;
+  text-align: center;
+}
+
+.mention_legale h1{
+  margin-bottom: 0.5rem;
+  color: black;
+  font-size: 5rem;
+}
+
+#mention .legale{
+  display: flex;
+  flex-direction: column;
+}
+#mention .legale .wrap2{
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem 0 5rem;
+}

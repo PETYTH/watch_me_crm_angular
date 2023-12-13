@@ -3,9 +3,12 @@ import
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import { AuthGuard } from './auth.guard';
-import {FormComponent} from "./auth/connexion/page/form/form.component";
+import { PageComponent } from './home/copyright/page/page.component';
 
 const routes: Routes = [
+  { path: 'page',
+    component: PageComponent,
+  },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.authModule)
@@ -39,4 +42,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}

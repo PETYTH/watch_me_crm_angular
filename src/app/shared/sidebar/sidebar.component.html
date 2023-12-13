@@ -17,6 +17,17 @@
 
         <div class="flex">
           <div class="espace-icon">
+            <app-button-link-sidebar [icon]="'fa-solid fa-house'" [link]="'/dashboard'"></app-button-link-sidebar>
+          </div>
+          <div class="espace-texte">
+            <p [ngClass]="{ 'hide': !isSidebarOpen, 'icon-title': isSidebarOpen }">
+              <a [routerLink]="'/dashboard'">Tableau de bord</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="espace-icon">
             <app-button-link-sidebar [icon]="'fa-solid fa-user-tie'" [link]="'/dashboard/employes/view'"></app-button-link-sidebar>
           </div>
           <div class="espace-texte">
