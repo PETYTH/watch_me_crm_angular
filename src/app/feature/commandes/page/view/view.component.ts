@@ -16,12 +16,14 @@ export class ViewComponent {
     private authService: AuthService,
   ) {}
 
-  userBirthday : string = '16/08/1996';
-  userEmail : string = 'nehligchris@live.fr';
-  userRole : string = 'Rôle';
+  commandeName : string = 'Montre Garmin';
+  clientName : string = 'Prince Petyth';
+  commandePrice : string = '150€';
+  commandeNumero : string = 'Numéro de commande : 987654321';
+  commandeStatus : string = 'En cours de livraison';
 
-  userPhoto : string = '../assets/img/user.png';
-  altTexte : string = 'image de l\'utilisateur';
+  firstPartAdress : string = '16 rue du Général Sarrail';
+  secondPartAdress : string = '76000 Rouen';
 
   getUserName(): string {
     return this.authService.getUserName();

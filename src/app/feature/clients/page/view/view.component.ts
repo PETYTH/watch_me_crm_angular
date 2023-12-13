@@ -16,12 +16,17 @@ export class ViewComponent {
     private authService: AuthService,
   ) {}
 
+  clientName : string = 'Prince Petyth';
+  clientStatus : string = 'Lead';
   userBirthday : string = '16/08/1996';
+  clientPhone : string = '06 02 03 04 05';
+  phoneIcon : string = 'fa-solid fa-phone';
+
   userEmail : string = 'nehligchris@live.fr';
   userRole : string = 'Rôle';
 
-  userPhoto : string = '../assets/img/user.png';
-  altTexte : string = 'image de l\'utilisateur';
+  firstPartAdress : string = '16 rue du Général Sarrail';
+  secondPartAdress : string = '76000 Rouen';
 
   getUserName(): string {
     return this.authService.getUserName();
