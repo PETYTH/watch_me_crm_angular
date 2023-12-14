@@ -43,7 +43,7 @@
           <tbody>
           <tr *ngFor="let row of tableRows; let i = index" class="evo-content">
             <td *ngFor="let cell of row" [routerLink]="viewLink + '/' + id[i]">
-              <div *ngIf="id[i]">
+              <div>
                   {{ cell }}
               </div>
             </td>
