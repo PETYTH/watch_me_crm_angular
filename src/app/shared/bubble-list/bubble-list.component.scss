@@ -17,6 +17,7 @@
         border-radius: 22px;
         height: 100%;
         width: 100%;
+        overflow-x: scroll;
 
         .evolution-head{
           display: flex;
@@ -66,7 +67,7 @@
                 &:hover{
                   background: $orangeBtnHover;
                 }
-              
+
               }
 
               &:hover, &:hover select{
@@ -106,7 +107,7 @@
         .data-table{
           margin: 0 auto 2rem;
           width: 90%;
-          
+
           .paginate{
             padding-top: 15px;
             text-align: center;
