@@ -24,6 +24,7 @@ import { BubbleAddCommandesComponent } from './bubble-add-commandes/bubble-add-c
 import { BubbleAddSocieteComponent } from './bubble-add-societe/bubble-add-societe.component';
 import { BubbleEditEntrepriseComponent } from './bubble-edit-entreprise/bubble-edit-entreprise.component';
 import { BubbleEditSocieteComponent } from './bubble-edit-societe/bubble-edit-societe.component';
+import { BubbleEditCommandesComponent } from './bubble-edit-commandes/bubble-edit-commandes.component';
 
 
 
@@ -52,6 +53,7 @@ import { BubbleEditSocieteComponent } from './bubble-edit-societe/bubble-edit-so
     BubbleAddSocieteComponent,
     BubbleEditEntrepriseComponent,
     BubbleEditSocieteComponent,
+    BubbleEditCommandesComponent,
   ],
   exports: [
     SidebarComponent,
@@ -72,6 +74,7 @@ import { BubbleEditSocieteComponent } from './bubble-edit-societe/bubble-edit-so
     BubbleEditClientComponent,
     BubbleAddSocieteComponent,
     BubbleEditSocieteComponent,
+    BubbleEditCommandesComponent,
   ],
   imports: [
     CommonModule,

@@ -20,6 +20,7 @@
 
     .name{
 
+
       @media (max-width: 700px){
         display: block;
       }
@@ -82,7 +83,7 @@
       transition: background-color 0.3s ease;
       margin-bottom: 20px;
       font-size: 15px;
-      box-shadow: 4px 4px 4px 0px #00000032;
+      box-shadow: 4px 4px 4px 0 #00000032;
 
       @media (max-width: 700px){
         padding: 9px 30px;

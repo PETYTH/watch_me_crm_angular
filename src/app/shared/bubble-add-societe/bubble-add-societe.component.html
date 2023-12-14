@@ -1,1 +1,61 @@
-<p>bubble-add-societe works!</p>
+<div class="container">
+  <form>
+    <div class="name">
+      <div class="input-group">
+        <i class="fas fa-user iconUser"></i>
+        <input type="text" id="nom" name="nom" required placeholder="Nom">
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-user iconUser"></i>
+        <input type="text" id="numero_siret" name="numero_siret" required placeholder="Numéro de siret">
+      </div>
+    </div>
+
+    <div class="info">
+      <div class="input-group">
+        <i class="fas fa-user iconUser"></i>
+        <input type="text" id="chiffre_affaire" name="chiffre_affaire" required placeholder="Chiffre d'affaire">
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-user iconUser"></i>
+        <input type="text" id="code_postale" name="code_postale" required placeholder="Code postale">
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-user iconUser"></i>
+        <input type="text" id="adresse" name="adresse" required placeholder="Adresse">
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-user iconUser"></i>
+        <input type="text" id="ville" name="ville" required placeholder="Ville">
+      </div>
+
+      <div class="input-group">
+        <i class="fa-regular fa-calendar-days"></i>
+        <input type="text" id="dob" name="dob" required placeholder="jj/mm/aaaa">
+        <!-- Champ caché pour stocker la valeur de la date -->
+        <input type="date" id="dob-hidden" name="dob" required style="display: none;">
+      </div>
+    </div>
+
+    <div class="input-group">
+      <i class="fa-solid fa-address-card"></i>
+      <select id="status" name="status" required>
+        <option value="active">Status</option>
+        <option value="inactive">Suspect</option>
+        <option value="inactive">Leads</option>
+        <option value="inactive">Prospect</option>
+        <option value="inactive">Acheteur</option>
+        <option value="inactive">Client</option>
+        <option value="inactive">Ambassadeur</option>
+      </select>
+    </div>
+
+    <button type="submit" class="submit-button">Valider</button>
+  </form>
+
+  <p>Après validation, l'employé recevra un mail pour modifier son mot de passe.</p>
+</div>
