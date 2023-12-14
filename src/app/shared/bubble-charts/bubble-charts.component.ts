@@ -21,7 +21,7 @@ export class BubbleChartsComponent {
     data: [{
       type: "doughnut",
       indexLabel: "{name}: {y}",
-      innerRadius: "90%",
+      innerRadius: "85%",
       yValueFormatString: "#,##0.00'%'",
       dataPoints: [
       { y: 33, name: "Commandes" },
