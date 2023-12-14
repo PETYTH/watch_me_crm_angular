@@ -4,6 +4,7 @@ import {ListComponent} from "./page/list/list.component";
 import {ViewComponent} from "./page/view/view.component";
 import {EditComponent} from "./page/edit/edit.component";
 import {AddComponent} from "./page/add/add.component";
+import {DeleteComponent} from "./page/delete/delete.component";
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
       {
         path: 'add',
         component: AddComponent
+      },
+      {
+        path: 'delete/:id',
+        component: DeleteComponent
       }
     ]
   }
