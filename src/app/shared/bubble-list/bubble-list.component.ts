@@ -10,11 +10,13 @@ export class BubbleListComponent {
 
   pages: number = 1;
   dataset: any[] = ['1','2','3','4'];
+  i: number = 0; // Ajoutez cette ligne
 
   @Input() addLink : string = '';
   @Input() viewLink : string = '';
   @Input() editLink : string = '';
-  @Input() id : number = 0;
+  @Input() deleteLink : string = '';
+  @Input() id : number[] = [];
   @Input() tableData : { [key: string]: string[] } = {};
 
   modifIcon : string = "fa-solid fa-pen";
@@ -37,7 +39,7 @@ export class BubbleListComponent {
         if (i < this.tableData[key].length) {
           newRow.push(this.tableData[key][i]);
         } else {
-          newRow.push(""); // Ajouter une chaîne vide si la valeur n'existe pas
+          newRow.push("");
         }
       }
       transposedData.push(newRow);

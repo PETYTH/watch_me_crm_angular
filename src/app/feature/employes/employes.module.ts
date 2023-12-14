@@ -8,6 +8,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { ViewComponent } from './page/view/view.component';
 import { AddComponent } from './page/add/add.component';
 import { EditComponent } from './page/edit/edit.component';
+import { DeleteComponent } from './page/delete/delete.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { EditComponent } from './page/edit/edit.component';
     ViewComponent,
     AddComponent,
     EditComponent,
+    DeleteComponent,
   ],
   exports: [
     EditComponent

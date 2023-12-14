@@ -11,6 +11,8 @@ export class ListComponent implements OnInit {
   employeLink : string = '/dashboard/employes/add';
   employeView : string = '/dashboard/employes/view';
   employeEdit : string = '/dashboard/employes/edit';
+  employeDelete : string = '/dashboard/employes/delete';
+  id: number[] = [];
   dataEmployes: { [key: string]: string[] } = {
     "Status" : []
   }
@@ -24,7 +26,7 @@ export class ListComponent implements OnInit {
   getAllEmployes() {
     this.apiService.getAllEmployes().subscribe(
       (result: any[]) => {
-        console.log(result)
+        this.id = result.map(employe => employe.id);
         this.dataEmployes["Status"] = result.map(employe => employe._status);
       },
       (error) => {

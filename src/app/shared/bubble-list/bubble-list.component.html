@@ -41,15 +41,17 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let row of tableRows" class="evo-content">
-            <td *ngFor="let cell of row" [routerLink]="viewLink + '/' + id">
-              {{ cell }}
+          <tr *ngFor="let row of tableRows; let i = index" class="evo-content">
+            <td *ngFor="let cell of row" [routerLink]="viewLink + '/' + id[i]">
+              <div *ngIf="id[i]">
+                  {{ cell }}
+              </div>
             </td>
 
             <td class="actions">
               <div class="modifs">
-                <i class="{{modifIcon}}" [routerLink]="editLink + '/' + id"></i>
-                <i class="{{deleteIcon}}"></i>
+                <i class="{{ modifIcon }}" [routerLink]="editLink + '/' + id[i]"></i>
+                <i class="{{ deleteIcon }} " [routerLink]="deleteLink + '/' + id[i]"></i>
               </div>
             </td>
           </tr>
