@@ -33,20 +33,12 @@
           <thead>
           <tr>
             <th *ngFor="let header of tableHeaders">{{ header }}</th>
-            <th colspan="2">Actions</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let row of tableRows" class="evo-content">
             <td *ngFor="let cell of row">
               {{ cell }}
-            </td>
-
-            <td class="actions">
-              <div class="modifs">
-                <i class="{{modifIcon}}"></i>
-                <i class="{{deleteIcon}}"></i>
-              </div>
             </td>
           </tr>
           </tbody>

@@ -1,6 +1,6 @@
 @import "../../../styles";
 
-#employe-infos{
+#all-infos{
   color: $iconColor;
 
   .bubble{
@@ -32,10 +32,15 @@
             justify-content: space-between;
             align-items: center;
 
-            .employe-perso{
+            .infos-perso, .complement-infos{
+              width: 50%;
               display: flex;
               flex-direction: column;
               gap: 29px;
+            }
+
+            .complement-infos{
+              align-items: flex-end;
             }
           }
         }
@@ -45,7 +50,7 @@
 }
 
 @media screen and (max-width: 600px){
-  #employe-infos{
+  #infos-infos{
     .bubble{
       &.big{
         .overall{

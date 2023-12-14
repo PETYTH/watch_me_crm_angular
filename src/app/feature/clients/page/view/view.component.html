@@ -3,23 +3,32 @@
     <div class="employe-infos">
       <app-bubble-all-infos>
         <div class="main-infos-content">
-          <h2>{{ getUserName() }}</h2>
+          <h2>{{ clientName }}</h2>
         </div>
 
         <div class="infos1-content">
-          <h3>{{userBirthday}}</h3>
+          <h3>{{clientStatus}}</h3>
         </div>
 
         <div class="infos2-content">
-          <span>{{userEmail}}</span>
+          <span>{{userBirthday}}</span>
         </div>
 
         <div class="infos3-content">
-          <img src="{{userPhoto}}" alt="{{altTexte}}">
+            <span>{{clientPhone}}</span>
+            <span><i class="{{phoneIcon}}"></i></span>
         </div>
 
         <div class="infos4-content">
-          <span>{{userRole}}</span>
+          <span>{{userEmail}}</span>
+        </div>
+
+        <div class="infos-complement1-content">
+          <span>{{firstPartAdress}}</span>
+        </div>
+
+        <div class="infos-complement2-content">
+          <span>{{secondPartAdress}}</span>
         </div>
       </app-bubble-all-infos>
     </div>
