@@ -19,6 +19,11 @@ import { BubbleAllInfosComponent } from './bubble-all-infos/bubble-all-infos.com
 import { BubbleAddClientComponent } from './bubble-add-client/bubble-add-client.component';
 import { BubbleEditClientComponent } from './bubble-edit-client/bubble-edit-client.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { BubbleAddEntrepriseComponent } from './bubble-add-entreprise/bubble-add-entreprise.component';
+import { BubbleAddCommandesComponent } from './bubble-add-commandes/bubble-add-commandes.component';
+import { BubbleAddSocieteComponent } from './bubble-add-societe/bubble-add-societe.component';
+import { BubbleEditEntrepriseComponent } from './bubble-edit-entreprise/bubble-edit-entreprise.component';
+import { BubbleEditSocieteComponent } from './bubble-edit-societe/bubble-edit-societe.component';
 
 
 
@@ -42,6 +47,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BubbleAllInfosComponent,
     BubbleAddClientComponent,
     BubbleEditClientComponent,
+    BubbleAddEntrepriseComponent,
+    BubbleAddCommandesComponent,
+    BubbleAddSocieteComponent,
+    BubbleEditEntrepriseComponent,
+    BubbleEditSocieteComponent,
   ],
   exports: [
     SidebarComponent,
@@ -57,6 +67,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BubbleEditEmployesComponent,
     BubbleAllInfosComponent,
     BubbleAddClientComponent,
+    BubbleEditEntrepriseComponent,
+    BubbleAddEntrepriseComponent,
+    BubbleEditClientComponent,
+    BubbleAddSocieteComponent,
+    BubbleEditSocieteComponent,
   ],
   imports: [
     CommonModule,
