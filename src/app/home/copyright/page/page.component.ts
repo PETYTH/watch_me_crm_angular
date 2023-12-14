@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class PageComponent {
 
+  exitDoor : string = 'fa-solid fa-door-open';
+
 }
