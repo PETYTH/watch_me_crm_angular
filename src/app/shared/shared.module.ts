@@ -19,6 +19,7 @@ import { BubbleAllInfosComponent } from './bubble-all-infos/bubble-all-infos.com
 import { BubbleAddClientComponent } from './bubble-add-client/bubble-add-client.component';
 import { BubbleEditClientComponent } from './bubble-edit-client/bubble-edit-client.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 
 
@@ -64,6 +65,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RouterModule,
     FormsModule,
     NgxPaginationModule,
+    CanvasJSAngularChartsModule,
   ],
   providers: [],
 })

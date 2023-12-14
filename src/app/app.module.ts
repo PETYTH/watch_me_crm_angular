@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import {PageComponent} from "./home/copyright/page/page.component";
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     SharedModule,
     FormsModule,
     NgxPaginationModule,
+    CanvasJSAngularChartsModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'}
