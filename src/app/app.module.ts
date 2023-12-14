@@ -11,13 +11,13 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import {PageComponent} from "./home/copyright/page/page.component";
 import { NgxPaginationModule } from 'ngx-pagination';
-
-
+import { BubbleEditCommandesComponent } from './share/bubble-edit-commandes/bubble-edit-commandes.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PageComponent,
+    BubbleEditCommandesComponent,
   ],
   imports: [
     BrowserModule,
