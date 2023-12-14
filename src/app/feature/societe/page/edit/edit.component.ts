@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent {
-
+  societe_nom = '';
+  societe_siret = '';
+  societe_ville = '';
+  societe_affaire = '';
+  societe_codep = '';
+  societe_adresse = '';
 }

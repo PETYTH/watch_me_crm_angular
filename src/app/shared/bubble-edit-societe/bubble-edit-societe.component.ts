@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-bubble-edit-societe',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./bubble-edit-societe.component.scss']
 })
 export class BubbleEditSocieteComponent {
-
+@Input() valueNom : string = '';
+@Input() valueSiret : string = '';
+@Input() valueAffaire : string = '';
+@Input() valueCodep : string = '';
+@Input() valueAdresse : string = '';
+@Input() valueVille : string = '';
 }

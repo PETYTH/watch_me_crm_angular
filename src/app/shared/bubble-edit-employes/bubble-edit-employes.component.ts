@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-bubble-edit-employes',
@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./bubble-edit-employes.component.scss']
 })
 export class BubbleEditEmployesComponent {
-  valueLastName : string = 'Justine';
-  valueFirstName : string = 'Labas';
-  valueMail : string = 'justinelabas95@gmail.com';
-  valueBirthday : string = '12/02/1995';
+@Input()  valueLastName : string = '';
+@Input()  valueFirstName : string = '';
+@Input()  valueEmail : string = '';
+@Input()  valueDateN : string = '';
+@Input()  valuePhone : string = '';
+@Input()  valueCodep : string = '';
+@Input()  valueAdresse : string = '';
+@Input()  valueVille : string = '';
 }
