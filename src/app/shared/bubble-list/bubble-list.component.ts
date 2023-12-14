@@ -19,6 +19,9 @@ export class BubbleListComponent {
   @Input() id : number[] = [];
   @Input() tableData : { [key: string]: string[] } = {};
 
+  @Input() titre : string = '';
+  @Input() subTitre : string = '';
+
   modifIcon : string = "fa-solid fa-pen";
   deleteIcon : string = "fa-solid fa-trash";
 

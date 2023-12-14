@@ -10,6 +10,9 @@ export class ListComponent {
   clientView : string = '/dashboard/clients/view';
   clientEdit : string = '/dashboard/clients/edit';
 
+  clientTitre : string = 'Liste des clients';
+  clientSubTitre : string = '';
+
   dataClients: { [key: string]: string[] } = {
     "row1": ["data 1", "data 2", "data 3", "data 4", "data 5"],
     "row2": ["data 6", "data 7", "data 8"],
