@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BubbleInfosUtileComponent {
 
+  infosTitre : string = 'Informations Utiles';
+
   options: string[] = ["Option 1", "Option 2", "Option 3"]; // Mettez vos options réelles ici
   menuVisible = false;
 

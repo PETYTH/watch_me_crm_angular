@@ -10,6 +10,9 @@ export class ListComponent {
   societeView : string = '/dashboard/societe/view';
   societeEdit : string = '/dashboard/societe/edit';
 
+  societeTitre : string = 'Liste des sociétés';
+  societeSubTitre : string = '';
+
   dataSociete: { [key: string]: string[] } = {
     "row1": ["data 1", "data 2", "data 3", "data 4", "data 5"],
     "row2": ["data 6", "data 7", "data 8"],

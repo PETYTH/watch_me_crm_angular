@@ -13,6 +13,8 @@ export class ListComponent implements OnInit {
   entrepriseDelete : string = '/dashboard/entreprises/delete';
   id: number[] = [];
   entreprises: any[] = [];
+  entrepriseTitre : string = 'Liste des succursales de la société';
+  entrepriseSubTitre : string = '';
   dataEntreprises: { [key: string]: string[] } = {
     "Nom" : [],
     "Siret" : [],

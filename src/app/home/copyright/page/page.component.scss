@@ -1,32 +1,52 @@
+@import '../../../../styles';
+
 #mention{
   background-color: #43264F;
-;
-}
-
-.wrap2 {
-  width:100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.mention_legale  {
   background-size: cover;
-  color: #051934;
-  text-align: center;
-}
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 2rem;
 
-.mention_legale h1{
-  margin-bottom: 0.5rem;
-  color: black;
-  font-size: 5rem;
-}
+  .exit-home{
+    padding: 1rem 0 0 1rem;
+    a{
+      color: $iconColor;
+      transition: color .5s;
+      font-size: 25px;
 
-#mention .legale{
-  display: flex;
-  flex-direction: column;
-}
-#mention .legale .wrap2{
-  display: flex;
-  flex-direction: column;
-  padding: 0 5rem 0 5rem;
+      &:hover{
+        color: $blueBtns;
+      }
+    }
+
+  }
+
+  .wrap2 {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+
+    .mention_legale h2{
+      color: $orangeBtnHover;
+      text-align: center;
+      font-size: 50px;
+      padding: 2rem 0;
+    }
+
+    .legale{
+      .subtitle{
+        color: $orangeBtnHover;
+        text-decoration: underline;
+      }
+    }
+
+    .para {
+      color: white;
+      margin: 1rem 0;
+
+      &:nth-child(1){
+        background: lime;
+      }
+    }
+  }
 }

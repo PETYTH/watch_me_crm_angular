@@ -8,13 +8,15 @@ import {SharedModule} from "../../shared/shared.module";
 import { AddComponent } from './page/add/add.component';
 import { ViewComponent } from './page/view/view.component';
 import { EditComponent } from './page/edit/edit.component';
+import { DeleteComponent } from './page/delete/delete.component';
 
 @NgModule({
   declarations: [
   ListComponent,
   AddComponent,
   ViewComponent,
-  EditComponent
+  EditComponent,
+  DeleteComponent
   ],
     imports: [
         SocieteRoutingModule,

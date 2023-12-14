@@ -13,6 +13,10 @@ export class ListComponent implements OnInit {
   employeEdit : string = '/dashboard/employes/edit';
   employeDelete : string = '/dashboard/employes/delete';
   id: number[] = [];
+
+  employeTitre : string = 'Liste des employés';
+  employeSubTitre : string = '';
+
   dataEmployes: { [key: string]: string[] } = {
     "Status" : []
   }

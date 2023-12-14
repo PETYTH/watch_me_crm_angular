@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BubbleEvolutionStatsComponent {
 
-  modifIcon : string = "fa-solid fa-pen";
-  deleteIcon : string = "fa-solid fa-trash";
+  evolutionTitre : string = "Tableau d'évolution de la société";
+  evolutionSubTitre : string = "Comparaison chiffres d'affaire";
 
   options: string[] = ["Option 1", "Option 2", "Option 3"]; // Mettez vos options réelles ici
   menuVisible = false;
