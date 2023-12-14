@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+// declare var require: any;
+// var CanvasJS = require('../assets/canvasjs.min.js');
+ 
+// CanvasJS.addColorSet("customColorSet",["#ffcb06", "#ce1249", "#3a943c", "#7f3e83", "#812900", "#2078b6", "#df7f2e", "#e3e3e3"]);
+
 @Component({
   selector: 'app-bubble-charts',
   templateUrl: './bubble-charts.component.html',
@@ -7,18 +12,23 @@ import { Component } from '@angular/core';
 })
 export class BubbleChartsComponent {
   chartOptions = {
-    title: {
-    	text: "Basic Column Chart in Angular"
+    animationEnabled: true,
+    theme: "dark2",
+    colorSet: "customColorSet",
+    title:{
+      text: "Vue d'enssemble"
     },
     data: [{
-      type: "column",
+      type: "doughnut",
+      indexLabel: "{name}: {y}",
+      innerRadius: "90%",
+      yValueFormatString: "#,##0.00'%'",
       dataPoints: [
-        { label: "entreprises",  y: 10  },
-        { label: "employes", y: 15  },
-        { label: "clients", y: 25  },
-        { label: "Produits",  y: 30  },
-        { label: "Commandes",  y: 28  }
+      { y: 33, name: "Commandes" },
+      { y: 25, name: "Clients" },
+      { y: 20, name: "Employes" },
+      { y: 15, name: "Entreprise" },
       ]
-    }]                
-  };
+    }]
+    }
 }
