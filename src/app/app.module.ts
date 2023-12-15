@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import {PageComponent} from "./home/copyright/page/page.component";
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BubbleEditCommandesComponent } from './share/bubble-edit-commandes/bubble-edit-commandes.component';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +30,7 @@ import { BubbleEditCommandesComponent } from './share/bubble-edit-commandes/bubb
     SharedModule,
     FormsModule,
     NgxPaginationModule,
+    CanvasJSAngularChartsModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'}

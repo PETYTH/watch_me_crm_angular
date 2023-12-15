@@ -25,6 +25,8 @@ import { BubbleAddSocieteComponent } from './bubble-add-societe/bubble-add-socie
 import { BubbleEditEntrepriseComponent } from './bubble-edit-entreprise/bubble-edit-entreprise.component';
 import { BubbleEditSocieteComponent } from './bubble-edit-societe/bubble-edit-societe.component';
 import { BubbleEditCommandesComponent } from './bubble-edit-commandes/bubble-edit-commandes.component';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
 
 
 
@@ -83,6 +85,7 @@ import { BubbleEditCommandesComponent } from './bubble-edit-commandes/bubble-edi
     RouterModule,
     FormsModule,
     NgxPaginationModule,
+    CanvasJSAngularChartsModule,
   ],
   providers: [],
 })
