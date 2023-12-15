@@ -5,25 +5,25 @@ import { ApiService } from '../../../api/api.service';
 import { AuthService } from '../../../../auth.service';
 
 @Component({
-    selector: 'app-form',
-    templateUrl: './form.component.html',
-    styleUrls: ['./form.component.scss']
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-    credentialsForm: FormGroup;
-    loginError: string | undefined;
+  credentialsForm: FormGroup;
+  loginError: string | undefined;
 
-    constructor(
-        private fb: FormBuilder,
-        private apiService: ApiService,
-        private authService: AuthService,
-        private router: Router
-    ) {
-        this.credentialsForm = this.fb.group({
-            email: ['', [Validators.required, Validators.email]],
-            password: ['', Validators.required]
-        });
-    }
+  constructor(
+    private fb: FormBuilder,
+    private apiService: ApiService,
+    private authService: AuthService,
+    private router: Router
+  ) {
+    this.credentialsForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
+    });
+  }
 
   loginUser(): void {
     const emailControl = this.credentialsForm.get('email');
@@ -52,7 +52,16 @@ export class FormComponent {
 
       this.apiService.loginUser(credentials).subscribe(
         (response) => {
-          // Votre logique de traitement réussi de connexion
+          const role = response.roles && response.roles.length > 0 ? response.roles[0] : '';
+          const tokenExpiry = new Date();
+          tokenExpiry.setHours(tokenExpiry.getHours() + 1);
+
+          this.authService.login(response.token, response.lastName, response.firstName, role, tokenExpiry);
+
+          // Déconnexion automatique si le token est expiré
+          this.authService.tokenExpiryCheck();
+
+          this.router.navigate(['/dashboard']); // Redirection vers le tableau de bord après une connexion réussie
         },
         (error) => {
           if (error.status === 401) {
@@ -66,5 +75,4 @@ export class FormComponent {
       );
     }
   }
-
 }
