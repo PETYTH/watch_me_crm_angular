@@ -25,44 +25,46 @@ export class FormComponent {
         });
     }
 
-    loginUser(): void {
-        const emailControl = this.credentialsForm.get('email');
-        const passwordControl = this.credentialsForm.get('password');
+  loginUser(): void {
+    const emailControl = this.credentialsForm.get('email');
+    const passwordControl = this.credentialsForm.get('password');
 
-        if (!emailControl?.value && passwordControl?.valid) {
-            this.loginError = 'Veuillez saisir l\'email';
-            return;
-        }
-
-        if (!passwordControl?.value && emailControl?.valid) {
-            this.loginError = 'Veuillez saisir le mot de passe';
-            return;
-        }
-
-        if (emailControl && passwordControl && emailControl.valid && passwordControl.valid) {
-            const credentials = {
-                username: emailControl.value,
-                password: passwordControl.value,
-            };
-
-            this.apiService.loginUser(credentials).subscribe(
-                (response) => {
-                    const role = response.roles && response.roles.length > 0 ? response.roles[0] : '';
-                    const tokenExpiry = new Date();
-                    tokenExpiry.setHours(tokenExpiry.getHours() + 1);
-
-                    this.authService.login(response.token, response.lastName, response.firstName, role, tokenExpiry);
-
-                    // Déconnexion automatique si le token est expiré
-                    this.authService.tokenExpiryCheck();
-
-                    this.router.navigate(['/dashboard']);
-                },
-                (error) => {
-                    console.error('Échec de la connexion :', error);
-                    // Gestion des erreurs
-                }
-            );
-        }
+    if (!emailControl?.value && !passwordControl?.value) {
+      this.loginError = 'Veuillez saisir l\'email et le mot de passe';
+      return;
     }
+
+    if (!emailControl?.value) {
+      this.loginError = 'Veuillez saisir l\'email';
+      return;
+    }
+
+    if (!passwordControl?.value) {
+      this.loginError = 'Veuillez saisir le mot de passe';
+      return;
+    }
+
+    if (emailControl && passwordControl && emailControl.valid && passwordControl.valid) {
+      const credentials = {
+        username: emailControl.value,
+        password: passwordControl.value,
+      };
+
+      this.apiService.loginUser(credentials).subscribe(
+        (response) => {
+          // Votre logique de traitement réussi de connexion
+        },
+        (error) => {
+          if (error.status === 401) {
+            this.loginError = 'Vous n\'avez pas accès à ce compte';
+          } else {
+            console.error('Échec de la connexion :', error);
+            this.loginError = 'Une erreur s\'est produite lors de la connexion';
+          }
+          // Gestion des autres erreurs si nécessaire
+        }
+      );
+    }
+  }
+
 }

@@ -74,7 +74,7 @@ export class BubbleChartsComponent implements OnInit {
               console.log(threeData);
               console.log(fourData);
 
-              const labels = countsByStatus.map((item: any) => item.status);
+             const labels = countsByStatus.map((item: any) => item.status);
               const values = countsByStatus.map((item: any) => item.count);
 
               this.clientsData = {
@@ -98,8 +98,8 @@ export class BubbleChartsComponent implements OnInit {
   }
 
 
-  updateChart(): void {
-    if (this.chart) {
+  updateChart() {
+    if (this.chart != null) {
       this.chart.destroy();
     }
 
@@ -109,27 +109,28 @@ export class BubbleChartsComponent implements OnInit {
     if (ctx) {
       const backgroundColors = ['red', 'orange', 'blue', 'green']; // Couleurs spécifiées
 
-      this.chart = new Chart(ctx, {
-        type: this.selectedChartType,
-        data: {
-          labels: this.clientsData.labels,
-          datasets: [{
-            data: this.clientsData.values,
-            backgroundColor: backgroundColors
-          }]
-        },
-        options: {
-          responsive: true,
-        }
-      });
+      // this.chart = new Chart(ctx, {
+      //   type: this.selectedChartType,
+      //   data: {
+      //     labels: this.clientsData.labels,
+      //     datasets: [{
+      //       data: this.clientsData.values,
+      //       backgroundColor: backgroundColors
+      //     }]
+      //   },
+      //   options: {
+      //     responsive: true,
+      //   }
+      // });
+
     }
+
   }
-
-
 
   onChartTypeSelect(event: Event): void {
         const selectedType = (event.target as HTMLSelectElement).value as ChartType;
         this.selectedChartType = selectedType;
         this.updateChart();
+    console.log('ok')
     }
 }
