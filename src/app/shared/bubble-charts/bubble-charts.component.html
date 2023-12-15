@@ -4,22 +4,27 @@
       <div class="chart-head">
         <div class="buttons">
           <div class="filter-infos">
-            <select>
-              <option value="defaut">Filtres</option>
-              <option value="opt">Option 1</option>
-              <option value="opt">Option 2</option>
-              <option value="opt">Option 3</option>
-              <option value="opt">Option 4</option>
-              <option value="opt">Option 5</option>
-              <option value="opt">Option 6</option>
+            <select (change)="onEntrepriseSelect()" [(ngModel)]="entrepriseId">
+              <!-- Options pour différentes entreprises -->
+              <option *ngFor="let entreprise of entreprises" [value]="entreprise.id">
+                {{ entreprise.nom }}
+              </option>
             </select>
           </div>
-
+          <div class="filter-infos">
+            <select (change)="onChartTypeSelect($event)" [(ngModel)]="selectedChartType">
+              <option *ngFor="let chartType of chartTypes" [value]="chartType">
+                {{ chartType }}
+              </option>
+            </select>
+          </div>
         </div>
       </div>
-
       <div class="chart-container">
-        <div class="chart-display"></div>
+        <div class="chart-display">
+          <!-- Utilisation d'un élément canvas pour afficher le graphique -->
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
     </div>
   </div>
