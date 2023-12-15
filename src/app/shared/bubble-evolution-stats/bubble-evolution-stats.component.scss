@@ -32,7 +32,7 @@
 
             .evo-title{
               font-family: $fontTitre;
-              font-size: $sizeTitre;
+              font-size: 30px;
             }
 
             .evo-subtitle{
@@ -134,6 +134,20 @@
         .evolution-head{
           flex-direction: column-reverse;
           gap: 2rem;
+
+          .evo-title{
+            text-align: center;
+
+            h2{
+              font-size: 25px;
+            }
+          }
+
+          .evo-subtitle{
+            h3{
+              font-size: 20px;
+            }
+          }
         }
 
         .data-table{
