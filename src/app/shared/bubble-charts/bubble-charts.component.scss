@@ -54,7 +54,6 @@
           height: 81.5%;
 
           .chart-display{
-            // background: blueviolet;
             width: 95%;
             height: 95%;
             margin: 0 auto;
@@ -64,5 +63,12 @@
     }
   }
 }
+
+/* Ajoutez ces styles à votre fichier CSS/SCSS pour fixer la taille du graphique */
+#myChart {
+  width: 400px;
+  height: 400px;
+}
+
 
 

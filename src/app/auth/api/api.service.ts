@@ -47,6 +47,35 @@ export class ApiService {
     return this.http.post(`${this.apiUrl}/${id}/user_delete`, userData);
   }
 
+  getAllClientsByEntreprise(entrepriseId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/all_clients_entreprise/${entrepriseId}`);
+  }
+
+    count_clients_entreprise(entrepriseId: number, headers: any): Observable<any> {
+        return this.http.get(`${this.apiUrl}/count_clients_entreprise/${entrepriseId}`, headers);
+    }
+
+
+    getAllEntreprises(): Observable<any> {
+        const token = this.authService.getToken();
+
+        if (!token) {
+            console.error('Le token de session n\'a pas été trouvé.');
+            return throwError('Token not found');
+        }
+
+        const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+        return this.http.get(`${this.apiUrl}/all_entreprises`, { headers }).pipe(
+            catchError((error) => {
+                console.error('Une erreur est survenue', error);
+                return throwError(error);
+            })
+        );
+    }
+
+
+
+
   // Ajoutez d'autres méthodes d'API selon les besoins
   countEmployes(): Observable<any> {
     const token = this.authService.getToken();

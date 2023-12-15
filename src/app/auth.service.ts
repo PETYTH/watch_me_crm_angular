@@ -39,6 +39,8 @@ export class AuthService {
     return sessionStorage.getItem(this.TOKEN_KEY) !== null;
   }
 
+
+
   login(token: string, firstName: string, lastName: string, role: string, tokenExpiry: Date): void {
     sessionStorage.setItem(this.TOKEN_KEY, token);
     this.userInfo = { firstName, lastName, role: [role] };
@@ -76,4 +78,20 @@ export class AuthService {
     this.isAuthenticatedValue = false;
     this.router.navigate(['/auth/connexion/form']);
   }
+    tokenExpiryCheck(): void {
+        const tokenExpiry = sessionStorage.getItem(this.TOKEN_EXPIRY_KEY);
+        if (tokenExpiry) {
+            const expiryDate = new Date(tokenExpiry);
+            const currentDate = new Date();
+
+            if (expiryDate < currentDate) {
+                this.logout();
+            } else {
+                const timeUntilExpiry = expiryDate.getTime() - currentDate.getTime();
+                setTimeout(() => {
+                    this.logout();
+                }, timeUntilExpiry);
+            }
+        }
+    }
 }
